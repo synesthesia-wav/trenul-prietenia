@@ -13,7 +13,7 @@
 | **Source** | FMCSA Company Census File (Socrata `az4n-8mr2`), public, daily refresh, no key, no cost |
 | **Filter** | added in the last 10 months · status Active · operating authority Active · motor carrier (not broker) · 1–25 power units · ≥1 driver · US address · 10-digit phone |
 | **Result** | **44,959 carriers** |
-| **Why** | A New Entrant must pass a Safety Audit within 12 months (49 CFR 385.307). Failure to file an acceptable corrective action plan in 45 or 60 days = **loss of USDOT registration** (385.321). The audit can be conducted **electronically, by submitting documents** — so the deliverable is a file, and the deadline belongs to the buyer. FMCSA ran 58,600 of these audits in 2023 at an 8.7% first-attempt failure rate — about 5,100 carriers a year who fail and have 45 days to respond. |
+| **Why** | A New Entrant must pass a Safety Audit within 12 months (the subpart D preamble; 49 CFR 385.307 sets an 18-month monitoring period and the audit follows once there are sufficient records, generally at least 3 months). Failure to file an acceptable corrective action plan in 45 or 60 days = **loss of USDOT registration** (385.319(c), enforced by 385.325(b)-(c)). The audit can be conducted **electronically, by submitting documents** — so the deliverable is a file, and the deadline belongs to the buyer. FMCSA ran 58,600 of these audits in 2023 at an 8.7% first-attempt failure rate — about 5,100 carriers a year who fail and have 45 days to respond. |
 
 **Sanity check that it is the right population:** 44,959 over 10 months annualises to ~54,000/year, against FMCSA's 58,600 audits in 2023. The list and the audit count agree.
 

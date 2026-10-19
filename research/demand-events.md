@@ -94,7 +94,7 @@ All read 2026-10-19.
 
 - 49 CFR 395.11 "Supporting documents" — eCFR, current as of 2026-10-05
 - 49 CFR 395.8, 395.30, 395.32, 395.34, 395.36, 395.22 — eCFR, as previously recorded
-- 49 CFR 385.309, 385.311, 385.319, 385.321, 385.329, 385.329T, 385.13, 385.11, 385.17, 385.19 — eCFR
+- 49 CFR 385.309, 385.311, 385.319, 385.321, 385.325, 385.329, 385.329T, 385.13, 385.11, 385.17, 385.19, 385.307 — eCFR
 - FMCSA "Prepare for Your Safety Audit" / Safety Audit Resource Guide — ai.fmcsa.dot.gov/NewEntrant
 - FMCSA New Entrant Safety Assurance Program brochure (2023-06) and the 2015 programme booklet
 - GAO-06-103, "FMCSA: Education and Outreach Programs Target Safety and Consumer Issues, but Gaps in Planning and Evaluation Remain"

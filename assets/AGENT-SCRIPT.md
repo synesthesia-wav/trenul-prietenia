@@ -23,7 +23,7 @@ That single sentence does four things: it shows you have something they do not, 
 - [ ] **The list of 25.** `research/data/state-campaign.csv` — 3–12 power-unit carriers, sorted by state. Pick your state, take 25, and have their names and cities in front of you. You will name one on the call.
 - [ ] **One sample review.** Produce a real cab review for one carrier so you can say *"here is what your client receives"* if they ask. `python3 assets/merge_cab_review.py research/sessions-example/_example-session-with-gaps.json --dot 9099205 --pdf`
 - [ ] **The one-pager** ready to send afterwards: `assets/agent-onepager.html`.
-- [ ] **Two facts in your head**, both verified and both checkable: a carrier that keeps operating after a final **Unsatisfactory** safety rating faces up to **$34,116 per offence, per day** (49 CFR Part 386 App. B; 49 CFR 385.13), and failure to file an acceptable corrective action plan after a failed safety audit **revokes the carrier's USDOT registration** (49 CFR 385.321).
+- [ ] **Two facts in your head**, both verified and both checkable: a carrier that keeps operating after a final **Unsatisfactory** safety rating faces up to **$34,116 per offence, per day** (49 CFR Part 386 App. B; 49 CFR 385.13), and failure to file an acceptable corrective action plan after a failed safety audit **revokes the carrier's USDOT registration** (49 CFR 385.319(c); enforced by 385.325(b)-(c)).
 - [ ] **A US entity and E&O in place.** If they are not, you are asking an agent to put their name on something unprotected. Do not make the call until they are — and if they are not yet bound, say so honestly on the call and offer to come back (see the objection table).
 
 ---

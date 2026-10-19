@@ -147,8 +147,8 @@ FMCSA Grade A sources (pulled 2026-10-19):
 | Exits 2023 | 142,920 | same, p.9 |
 | When the audit happens | **within the first 12 months of operations** | 49 CFR 385.307; FMCSA New Entrant page |
 | **How it is conducted** | "at the carrier's place of business, **or electronically, by submitting relevant documents to FMCSA**" | ai.fmcsa.dot.gov/NewEntrant/SafetyAudits.aspx |
-| **Automatic-fail trigger** | "Failing to require drivers to make hours-of-service records" (395.8(a)) | 49 CFR 385.321(b); FMCSA new-entrant page |
-| **The cliff** | CAP due in 45 days (passenger/HM) or 60 days (all other); **failure to submit or implement the CAP = loss of USDOT registration** | 385.321; FMCSA new-entrant page |
+| **Automatic-fail trigger** | "Failing to require drivers to make hours-of-service records" (395.8(a)) — **requires a violation threshold of 51% or more of examined records**, not a single occurrence | 49 CFR 385.321(b) item 13; FMCSA new-entrant page |
+| **The cliff** | CAP due in 45 days (passenger/HM) or 60 days (all other); **failure to submit or implement the CAP = loss of USDOT registration** | 385.319(c)(1)-(2), enforced by 385.325(b)-(c) |
 | 16 regulations = automatic failure | | 385.321(b) table |
 | Documents auditors request | Driver list, licence, **RODS + supporting documentation (toll receipts, fuel receipts, bills of lading, trip reports)**, MVR, medical certificate, vehicle list, maintenance files, accident register, insurance proof, BOC-3, IRP/IFTA | FMCSA Safety Audit Resource Guide |
 
