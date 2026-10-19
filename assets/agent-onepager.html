@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!--
+  AGENT ONE-PAGER — for the truck insurance agent / broker. One page.
+  Hand it to them; they hand the client review to their insured.
+
+  Design rules that came out of the strategy panel (research/strategy-memo.md):
+   - NO per-truck price. A per-truck number invites the $29 software comparison.
+   - Lead with THEIR money, not our service: a denied claim, a non-renewal,
+     and a carrier that cannot legally operate.
+   - Say what we do NOT do. For an agent with a book, "we will not touch your
+     client's DQ files or their drug programme" is what makes them send it.
+   - The ask is ONE free review, with their name on it. Not a referral fee.
+  All figures checked 2026-10-19 (see footer).
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Hours-of-service file review for your insured fleets — {{AGENCY_NAME}}</title>
+<style>
+  @page { size: Letter; margin: 0.55in 0.6in 0.5in 0.6in; }
+  * { box-sizing: border-box; }
+  html, body { margin:0; padding:0; }
+  body { font: 10.5pt/1.44 "Helvetica Neue", Helvetica, Arial, sans-serif; color:#14181d;
+         -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  h1 { font-size: 18pt; margin:0 0 3pt; letter-spacing:-.3pt; }
+  h2 { font-size: 9.5pt; margin:16pt 0 7pt; text-transform:uppercase; letter-spacing:1.2pt; color:#5a6570; }
+  .rule { height:4px; background:#14181d; margin:0 0 10pt; }
+  .sub { font-size:10pt; color:#5a6570; margin:0 0 13pt; }
+  .lede { font-size:11.5pt; margin:0 0 13pt; }
+  .lede b { font-weight:700; }
+  .ask { border:2.5pt solid #14181d; padding:11pt 13pt; margin:0 0 13pt; }
+  .ask .t { font-size:12.5pt; font-weight:700; margin-bottom:5pt; }
+  .ask .b { font-size:10pt; }
+  .cols { display:flex; gap:18pt; }
+  .col { flex:1; }
+  ul { margin:0 0 10pt; padding-left:15pt; }
+  li { margin-bottom:4.5pt; font-size:10pt; }
+  .money { border-left:4pt solid #14181d; padding:0 0 0 10pt; margin:0 0 9pt; }
+  .money .f { font-size:20pt; font-weight:700; line-height:1.05; letter-spacing:-.4pt; }
+  .money .t { font-size:9.5pt; color:#39424b; margin-top:2pt; }
+  .money .c { font-size:8.5pt; color:#6b7680; margin-top:2pt; }
+  .not { background:#f4f6f8; border:1px solid #d8dde2; padding:9pt 12pt; font-size:9.5pt; }
+  .not b { font-weight:700; }
+  .not ul { margin:4pt 0 0; }
+  .not li { font-size:9.5pt; }
+  .cta { border:2.5pt solid #14181d; padding:11pt 13pt; margin:12pt 0 10pt; }
+  .cta .t { font-size:12pt; font-weight:700; margin-bottom:4pt; }
+  .foot { border-top:1px solid #d8dde2; padding-top:6pt; font-size:8pt; color:#6b7680; margin-top:8pt; }
+  .foot b { color:#39424b; }
+  .foot a { color:#39424b; }
+  .sig { margin-top:10pt; font-size:10pt; }
+  .sig b { font-size:12pt; }
+  .stamp { font-size:9pt; color:#5a6570; }
+</style>
+</head>
+<body>
+
+<div class="rule"></div>
+<h1>A file, not a report</h1>
+<p class="sub">Hours-of-service documentation for the small fleets on your book &middot; prepared by {{OUR_NAME}}</p>
+
+<p class="lede">
+  Your insured fleets keep hours-of-service records. When FMCSA or an adjuster asks for them, the fleet
+  hands over a folder of <b>paperwork it is not sure is complete</b>, and then everyone finds out
+  whether it was adequate <b>afterwards</b>.
+  <br><br>
+  We assemble that paperwork into a <b>file, in the order the examiner asks for it</b>, before anyone asks.
+  Every correction is backed by the document that supports it, and the driver certifies his own record
+  &mdash; we never write in a log.
+</p>
+
+<div class="ask">
+  <div class="t">The ask: one of your insured fleets, reviewed free, with your name on it.</div>
+  <div class="b">
+    Send me one carrier who is worried about their safety record, their paperwork, or an upcoming
+    renewal. I will do the review at no cost, write it up in their name, and send it to you first.
+    If it is not useful, you have spent nothing. If it is, you will see exactly what that carrier's file
+    looks like before you ever have to ask them about it.
+  </div>
+</div>
+
+<h2>Why this is your problem, not just theirs</h2>
+<div class="cols">
+  <div class="col">
+    <div class="money">
+      <div class="f">$34,116</div>
+      <div class="t">per offence, per day, for a carrier that keeps operating after a final
+        <b>Unsatisfactory</b> safety rating</div>
+      <div class="c">49 CFR Part 386 App. B &middot; 49 CFR 385.13</div>
+    </div>
+    <div class="money">
+      <div class="f">$15,846</div>
+      <div class="t">maximum civil penalty for knowing falsification of a required record</div>
+      <div class="c">49 CFR Part 386 App. B</div>
+    </div>
+  </div>
+  <div class="col">
+    <ul>
+      <li>An <b>Unsatisfactory</b> rating is FMCSA's finding that the carrier is <b>unfit</b> to operate.
+        The prohibition in 385.13 applies &mdash; and it also makes the carrier
+        <b>ineligible for federal contracts</b>.</li>
+      <li>Failure to file an acceptable corrective action plan after a failed safety audit
+        <b>revokes the carrier's USDOT registration</b>. That fleet is gone, and it was your insured.</li>
+      <li>A single <b>Hours-of-Service</b> BASIC above the intervention threshold is enough for
+        FMCSA's inspection-selection algorithm to place the carrier in the
+        <b>"Inspect"</b> group &mdash; the priority list roadside inspectors work from.</li>
+    </ul>
+  </div>
+</div>
+
+<h2>What your client gets</h2>
+<ul>
+  <li>The <b>file</b> &mdash; hours-of-service records, supporting documents, driver qualification files,
+    vehicle records, insurance, drug-and-alcohol programme, accident register &mdash; assembled in the order
+    FMCSA requests them, with every gap closed or listed.</li>
+  <li>A <b>written correction trail</b>: for every change, the source document that justifies it, and the
+    driver's own certification. The original record is never altered or erased.</li>
+  <li>The <b>deadlines on a page</b>: the 12-month audit date, the 45-or-60-day corrective action plan
+    window, and the daily deadlines that move a carrier onto a priority list.</li>
+  <li>Something <b>you can put in front of your underwriter</b>, and that the carrier can put in front of
+    FMCSA, an adjuster, or its own attorney.</li>
+</ul>
+
+<h2>What we do not do</h2>
+<div class="not">
+  <b>So that you can send this without worrying about where it lands.</b>
+  <ul>
+    <li>We do not touch driver qualification files, drug-and-alcohol programmes, clearinghouse queries,
+      IFTA, UCR, permits or vehicle maintenance. If a carrier needs those, we will tell you who does
+      them well &mdash; and we would rather say so than take the work we are worse at.</li>
+    <li>We do not sell training or advice. FMCSA publishes all of it free, and we are not going to charge
+      you for a PDF.</li>
+    <li>We do not make claims about your carrier's compliance and we do not represent anyone before
+      FMCSA. We assemble documents; your attorney does law.</li>
+  </ul>
+</div>
+
+<div class="cta">
+  <div class="t">Try it on one fleet. Free, your name on it, no obligation.</div>
+  <div class="b">Reply with a carrier and I will have the review back to you within two business days.</div>
+</div>
+
+<div class="sig">
+  <b>{{OUR_NAME}}</b> &middot; {{OUR_TITLE}} &middot; {{OUR_PHONE}} &middot; {{OUR_EMAIL}}
+  <div class="stamp">Delivery is staffed from Chisinau, Moldova. Contracting and professional liability are
+  provided by a US entity with US-admitted E&amp;O cover and US claims handling.</div>
+</div>
+
+<div class="foot">
+  <b>Sources</b> &mdash; every figure and citation above was checked on 2026-10-19 and is traceable:
+  49 CFR Part 386 Appendix B (penalty schedule) and 49 CFR 385.13 (unsatisfactory rated carriers) at eCFR;
+  FMCSA's Inspection Selection System (ISS-CSA) algorithm; FMCSA's New Entrant Safety Assurance
+  programme. <b>These are regulatory maximums, not predictions</b> &mdash; what a carrier actually pays
+  depends on the facts and on insurance terms. We are not affiliated with FMCSA and this is not legal advice.
+</div>
+
+</body>
+</html>

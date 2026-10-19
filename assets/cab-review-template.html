@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<!--
+  CAB REVIEW — customer-facing, print-ready, ONE carrier.
+  Page 1: the review letter (read on a phone, forwarded to an agent/attorney).
+  Page 2: the cab checklist (printed, pinned in the truck).
+
+  Merge fields are double-brace KEY placeholders. Replace with assets/merge_cab_review.py or by hand.
+  Sources for every CFR cite and figure are in the footer of each page.
+  Print: File > Print > Letter, margins "Default", Background graphics ON.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Hours-of-Service File Review — {{LEGAL_NAME}}</title>
+<style>
+  @page { size: Letter; margin: 0.6in 0.65in 0.55in 0.65in; }
+  * { box-sizing: border-box; }
+  html, body { margin:0; padding:0; }
+  body {
+    font: 10.5pt/1.42 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #14181d; -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  .page { page-break-after: always; }
+  .page:last-child { page-break-after: auto; }
+  h1 { font-size: 17pt; margin: 0 0 2pt; letter-spacing: -0.2pt; }
+  h2 { font-size: 10pt; margin: 0 0 8pt; text-transform: uppercase; letter-spacing: 1.1pt; color:#5a6570; font-weight:700; }
+  .rule { height:3px; background:#14181d; margin:0 0 12pt; }
+  .sub { font-size: 9.5pt; color:#5a6570; margin:0 0 14pt; }
+  .meta { display:flex; justify-content:space-between; font-size:9pt; color:#5a6570; border-bottom:1px solid #d8dde2; padding-bottom:6pt; margin-bottom:12pt; }
+  .meta b { color:#14181d; font-weight:600; }
+  .lede { font-size:11pt; margin:0 0 12pt; }
+  .lede b { font-weight:700; }
+  .deadlines { border:2px solid #14181d; padding:9pt 11pt; margin:0 0 14pt; }
+  .deadlines .row { display:flex; gap:10pt; padding:5pt 0; border-bottom:1px solid #dfe4e8; }
+  .deadlines .row:last-child { border-bottom:0; }
+  .deadlines .when { flex:0 0 108pt; font-weight:700; font-size:9.5pt; text-transform:uppercase; letter-spacing:.4pt; }
+  .deadlines .what { flex:1; font-size:10pt; }
+  table { width:100%; border-collapse:collapse; margin:0 0 12pt; }
+  th { text-align:left; font-size:8.5pt; text-transform:uppercase; letter-spacing:.8pt; color:#5a6570; border-bottom:1.5px solid #14181d; padding:0 6pt 4pt 0; font-weight:700; }
+  td { padding:4.5pt 6pt 4.5pt 0; border-bottom:1px solid #e4e8ec; vertical-align:top; font-size:9.5pt; }
+  tr { page-break-inside: avoid; }
+  .mark { display:inline-block; width:13pt; height:13pt; border:1.4pt solid #14181d;
+          text-align:center; line-height:12.5pt; font-size:9pt; font-weight:700; }
+  /* The glyph is per-state via CSS, so a missing item can never render as a tick. */
+  .mark.y { background:#14181d; }
+  .mark.y::after  { content:"\2713"; color:#fff; }   /* check  */
+  .mark.n { background:#fff; }
+  .mark.n::after  { content:"\00D7"; color:#14181d; } /* cross  */
+  .mark.p { background:#fff; border-style:dashed; }
+  .mark.p::after  { content:"\2013"; color:#8a949d; } /* en dash */
+  .cite { color:#6b7680; font-size:8.5pt; white-space:nowrap; }
+  .item { font-weight:600; }
+  .why { color:#39424b; }
+  .totals { display:flex; gap:8pt; margin:0 0 12pt; }
+  .tot { flex:1; border:1.4pt solid #14181d; padding:7pt 9pt; }
+  .tot .n { font-size:19pt; font-weight:700; line-height:1; }
+  .tot .l { font-size:8.5pt; text-transform:uppercase; letter-spacing:.7pt; color:#5a6570; margin-top:3pt; }
+  .do { border-left:3.5pt solid #14181d; padding:2pt 0 2pt 10pt; margin:0 0 8pt; }
+  .do .t { font-weight:700; font-size:10.5pt; }
+  .do .b { font-size:9.5pt; color:#39424b; }
+  .ask { border:2.5pt solid #14181d; padding:10pt 12pt; margin:10pt 0 12pt; }
+  .ask .q { font-size:12pt; font-weight:700; margin-bottom:4pt; }
+  .ask .n { font-size:9pt; color:#5a6570; }
+  .foot { border-top:1px solid #d8dde2; padding-top:6pt; font-size:8pt; color:#6b7680; margin-top:10pt; }
+  .foot b { color:#39424b; }
+  .foot a { color:#39424b; }
+  .note { font-size:9pt; color:#5a6570; font-style:italic; margin:0 0 10pt; }
+  .offer { background:#f4f6f8; border:1px solid #d8dde2; padding:8pt 10pt; font-size:9.5pt; margin:0 0 10pt; }
+  .offer b { font-weight:700; }
+  .pin { font-size:8pt; color:#5a6570; text-align:center; margin-top:8pt; }
+</style>
+</head>
+<body>
+
+<!-- ============================== PAGE 1 ============================== -->
+<section class="page">
+  <div class="rule"></div>
+  <h1>Hours-of-Service File Review</h1>
+  <p class="sub">{{LEGAL_NAME}} &middot; USDOT {{DOT_NUMBER}} &middot; {{PHY_CITY}}, {{PHY_STATE}}</p>
+
+  <div class="meta">
+    <div>Prepared <b>{{SESSION_DATE}}</b> by <b>{{REVIEWER}}</b></div>
+    <div>Operating authority since <b>{{ADD_MONTH_YEAR}}</b> &middot; <b>{{POWER_UNITS}}</b> power units &middot; <b>{{TOTAL_DRIVERS}}</b> drivers</div>
+  </div>
+
+  <p class="lede">
+    This is the paperwork review we did together on <b>{{SESSION_DATE}}</b>. It is <b>yours to keep</b> &mdash;
+    print it, pin it, or forward it to your insurance agent, your attorney, or whoever else you want to
+    see it. It is not a bill, and it is not a contract.
+  </p>
+
+  <h2>The two dates that matter to you</h2>
+  <div class="deadlines">
+    <div class="row">
+      <div class="when">Within 12 months</div>
+      <div class="what">
+        FMCSA must schedule a <b>New Entrant Safety Audit</b> once you have enough records to evaluate.
+        Your authority was granted <b>{{ADD_MONTH_YEAR}}</b>. &nbsp;<span class="cite">49 CFR 385.307</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="when">45 or 60 days</div>
+      <div class="what">
+        If you <b>fail</b> that audit, FMCSA gives you a corrective action plan to file. File nothing, or file
+        something they do not accept, and <b>your USDOT registration is revoked</b>.
+        45 days applies to passenger and placardable-hazardous carriers; 60 days to everyone else.
+        &nbsp;<span class="cite">49 CFR 385.321</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="when">Every day</div>
+      <div class="what">
+        An <b>Unsatisfactory</b> safety rating means FMCSA finds you unfit, and the prohibition in
+        385.13 applies &mdash; including ineligibility for federal contracts. Keeping a truck on the road
+        after a final Unsatisfactory rating is a separate offence <b>each day</b>.
+        &nbsp;<span class="cite">49 CFR 385.13; 49 CFR Part 386 App. B</span>
+      </div>
+    </div>
+  </div>
+
+  <h2>What we found</h2>
+  <div class="totals">
+    <div class="tot"><div class="n">{{N_CAB_OK}}</div><div class="l">Cab items in place</div></div>
+    <div class="tot"><div class="n">{{N_CAB_MISSING}}</div><div class="l">Missing from the cab</div></div>
+    <div class="tot"><div class="n">{{N_FILE_OK}}</div><div class="l">File items complete</div></div>
+    <div class="tot"><div class="n">{{N_FILE_MISSING}}</div><div class="l">File items missing</div></div>
+  </div>
+
+  <h2>The five things to do first</h2>
+  <div class="do"><div class="t">1. {{F1_TITLE}}</div><div class="b">{{F1_BODY}}</div></div>
+  <div class="do"><div class="t">2. {{F2_TITLE}}</div><div class="b">{{F2_BODY}}</div></div>
+  <div class="do"><div class="t">3. {{F3_TITLE}}</div><div class="b">{{F3_BODY}}</div></div>
+  <div class="do"><div class="t">4. {{F4_TITLE}}</div><div class="b">{{F4_BODY}}</div></div>
+  <div class="do"><div class="t">5. {{F5_TITLE}}</div><div class="b">{{F5_BODY}}</div></div>
+
+  <div class="ask">
+    <div class="q">When do you think your audit is?</div>
+    <div class="n">
+      If it is inside 90 days, we can assemble the whole file before the notice arrives &mdash; which is a
+      two-week job rather than a scramble. If it is further out, the checklist on page 2 is enough to
+      get on top of it yourself. Either way, this document is yours.
+    </div>
+  </div>
+
+  <div class="offer">
+    <b>If you want the file assembled for you:</b> it is a fixed fee for the whole job, not a monthly
+    subscription &mdash; {{EVENT_PRICE_LINE}}. It includes the document list on page 2, the gaps closed, and
+    the file in the order FMCSA asks for it. <b>If you do not need it, we will tell you that on the
+    phone.</b>
+  </div>
+
+  <div class="foot">
+    <b>What this is.</b> A paperwork review conducted with you, against the published list of documents FMCSA
+    requests during a New Entrant Safety Audit (FMCSA Safety Audit Resource Guide,
+    <a href="https://ai.fmcsa.dot.gov/NewEntrant/MC/Overview.aspx">ai.fmcsa.dot.gov/NewEntrant</a>) and
+    the regulations cited beside each item. <b>What this is not.</b> Legal advice, a compliance guarantee,
+    a representation that your carrier will pass an audit, or a statement about any violation we did not
+    personally observe. <b>All figures and citations were checked on {{SOURCE_DATE}}.</b> Regulations change;
+    verify against eCFR before you rely on them. We are not affiliated with or speaking for FMCSA.
+  </div>
+</section>
+
+<!-- ============================== PAGE 2 ============================== -->
+<section class="page">
+  <div class="rule"></div>
+  <h1>The Cab Checklist</h1>
+  <p class="sub">{{LEGAL_NAME}} &middot; USDOT {{DOT_NUMBER}} &middot; printed {{SESSION_DATE}}</p>
+
+  <p class="note">
+    Page 2 of the file review. <b>Print this page and keep it in the truck.</b> Every item can be checked
+    in about five minutes without any software, and every one of them is something an inspector can ask
+    for. Legend: <b>&check;</b> in place &middot; <b>&times;</b> missing &middot; <b>&ndash;</b> not checked.
+  </p>
+
+  <h2>Part A &mdash; In the cab, right now</h2>
+  <table>
+    <tr><th style="width:26pt">&nbsp;</th><th style="width:36%">Item</th><th>Why it matters</th></tr>
+
+    <tr><td><span class="mark {{CAB:dtransfer}}"></span></td>
+        <td class="item">ELD data-transfer instruction sheet</td>
+        <td class="why">How the driver produces and hands over his hours-of-service records to an officer.
+        <span class="cite">395.22(h)(1)</span></td></tr>
+
+    <tr><td><span class="mark {{CAB:malfsheet}}"></span></td>
+        <td class="item">ELD malfunction reporting instruction sheet</td>
+        <td class="why">Without it the driver does not know to notify you in writing within 24 hours, or to
+        rebuild his log on paper. <span class="cite">395.22(h)(2); 395.34(a)</span></td></tr>
+
+    <tr><td><span class="mark {{CAB:grids}}"></span></td>
+        <td class="item">8 days of blank graph grids</td>
+        <td class="why">The paper a driver needs to reconstruct 24 hours plus the previous 7 days after a
+        malfunction. <span class="cite">395.22(h)(3); 395.34(a)(2)</span></td></tr>
+
+    <tr><td><span class="mark {{CAB:rods7}}"></span></td>
+        <td class="item">Driver's last 7 days of records, in the cab</td>
+        <td class="why">The driver must have his copy and be able to produce it while on duty.
+        <span class="cite">395.8(k)(2)</span></td></tr>
+
+    <tr><td><span class="mark {{CAB:certified}}"></span></td>
+        <td class="item">Every logbook signed and certified by the driver</td>
+        <td class="why">An uncertified log is treated as no log. The driver certifies with "Agree" in the ELD
+        after the final entry. <span class="cite">395.30(b); 395.8(f)(2)</span></td></tr>
+
+    <tr><td><span class="mark {{CAB:shipdoc}}"></span></td>
+        <td class="item">Shipping document number in the log</td>
+        <td class="why">The number that ties the log to the bill of lading. Missing it is a form-and-manner
+        finding. <span class="cite">395.24(c)(iii)</span></td></tr>
+
+    <tr><td><span class="mark {{CAB:unassigned}}"></span></td>
+        <td class="item">Unassigned driving time explained or assigned</td>
+        <td class="why">This is a carrier duty, not a driver duty. Either annotate why the time is unassigned
+        or assign it to the right driver. <span class="cite">395.32(c)</span></td></tr>
+
+    <tr><td><span class="mark {{CAB:malfnote}}"></span></td>
+        <td class="item">Last ELD malfunction reported to you in writing, within 24 hours</td>
+        <td class="why">Failure to report is a weight-5 finding. <span class="cite">395.34(a)(1)</span></td></tr>
+
+    <tr><td><span class="mark {{CAB:insp}}"></span></td>
+        <td class="item">Current annual vehicle inspection report in the cab</td>
+        <td class="why">Every commercial vehicle inspected every 12 months, documentation on the vehicle.
+        <span class="cite">396.17; Part 396 App. G</span></td></tr>
+  </table>
+
+  <h2>Part B &mdash; In the file, at the office</h2>
+  <table>
+    <tr><th style="width:26pt">&nbsp;</th><th style="width:36%">Document</th><th>Requirement</th></tr>
+
+    <tr><td><span class="mark {{FILE:driverslist}}"></span></td>
+        <td class="item">Drivers list</td><td class="why">All currently employed drivers.</td></tr>
+    <tr><td><span class="mark {{FILE:licenses}}"></span></td>
+        <td class="item">Driver's licence copies</td><td class="why">Part of each driver qualification file.</td></tr>
+    <tr><td><span class="mark {{FILE:rods}}"></span></td>
+        <td class="item">Records of duty status, plus supporting documentation</td>
+        <td class="why">6 months retained. Supporting documents: toll receipts, fuel receipts, bills of lading,
+        trip reports. <span class="cite">395.8(k)(1)</span></td></tr>
+    <tr><td><span class="mark {{FILE:mvr}}"></span></td>
+        <td class="item">Motor vehicle records (MVR)</td><td class="why">For every driver.</td></tr>
+    <tr><td><span class="mark {{FILE:medical}}"></span></td>
+        <td class="item">Medical certificates</td><td class="why">Every driver medically qualified.</td></tr>
+    <tr><td><span class="mark {{FILE:vehlist}}"></span></td>
+        <td class="item">Vehicle list</td>
+        <td class="why">Unit number, VIN, plate number, state, for every vehicle and trailer.</td></tr>
+    <tr><td><span class="mark {{FILE:vehinsp}}"></span></td>
+        <td class="item">Vehicle inspection reports</td><td class="why">Within the preceding 12 months.</td></tr>
+    <tr><td><span class="mark {{FILE:insurance}}"></span></td>
+        <td class="item">Proof of insurance</td>
+        <td class="why">Sufficient to meet the minimum public liability requirement.</td></tr>
+    <tr><td><span class="mark {{FILE:drug}}"></span></td>
+        <td class="item">Drug &amp; alcohol program</td>
+        <td class="why">Periodic testing for CDL drivers.</td></tr>
+    <tr><td><span class="mark {{FILE:accident}}"></span></td>
+        <td class="item">Accident register</td><td class="why">FMCSA-reportable crashes, past 3 years.</td></tr>
+    <tr><td><span class="mark {{FILE:authority}}"></span></td>
+        <td class="item">Operating authority, BOC-3, IRP/IFTA</td>
+        <td class="why">Proof you are registered to run.</td></tr>
+    <tr><td><span class="mark {{FILE:submission}}"></span></td>
+        <td class="item">Signed logbooks submitted to you</td>
+        <td class="why">The driver submits the certified record to the carrier within 13 days of the
+        24-hour period. <span class="cite">395.8(a)(2)(ii)</span></td></tr>
+  </table>
+
+  <div class="foot">
+    <b>Sources</b> &mdash; FMCSA New Entrant Safety Assurance Programme,
+    <a href="https://ai.fmcsa.dot.gov/NewEntrant/MC/Overview.aspx">ai.fmcsa.dot.gov/NewEntrant</a>
+    (Safety Audit Resource Guide). CFR cites are to 49 CFR Parts 385, 395 and 396, checked on
+    {{SOURCE_DATE}}. This checklist is a summary, not the regulation; where they differ, the regulation
+    governs. It is a working document, not legal advice.
+  </div>
+
+  <p class="pin">Prepared for {{LEGAL_NAME}} &middot; {{SESSION_DATE}} &middot; page 2 of 2</p>
+</section>
+
+</body>
+</html>

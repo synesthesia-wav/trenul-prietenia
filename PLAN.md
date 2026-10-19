@@ -321,13 +321,14 @@ Our service addresses 1, 2, 4. It creates 3 — being monitored is unpleasant. *
 
 ### Days 15–45 — Proof
 - [ ] **The first New Entrant audit-prep engagement sold and delivered** (Tier 0). This is the proof of the product, not of the funnel.
+- [ ] **Run the first 20 glovebox sessions.** Each one ends with the cab review generated and sent within 48 hours (`assets/merge_cab_review.py`). The written review is the artefact that gets forwarded, and forwarding is the only referral engine we have.
 - [ ] 3–5 friendly fleets from the partners' network, on paid pilots (business-hours SLA, flat fee).
 - [ ] Baseline their FMCSA records, response times, correction turnaround, and driver feedback **before** we touch anything.
 - [ ] **Measure what we can count ourselves, not what we cannot:** weight-5 paperwork defects found and closed per truck per month, by regulation. **Do not build a citation-count measurement programme** — a small fleet gets 1–3 roadside inspections a year and FMCSA will not assign a percentile without three driver inspections with violations, so the outcome metric cannot move in 90 days. The pre-engagement baseline is still captured, as a *byproduct of the first call*, but it is not a workstream.
 - [ ] Fix the SOP from real pilot cases.
 
 ### Days 40–90 — Repeatable motion
-- [ ] **Insurance agents first, and with a target attached.** The panel was unanimous: the agent is the channel that substitutes for the track record we cannot show, and the plan previously ranked it #1 while attaching no number to it. Target: **10 agent conversations, 3 agents with a referral in progress, 1 signed referral.** The ask is *one free file for one of their insured fleets*, not a referral fee.
+- [ ] **Insurance agents first, and with a target attached.** Send the one-pager (`assets/agent-onepager.html`). One carrier, free, with the agent's name on it. The panel was unanimous: the agent is the channel that substitutes for the track record we cannot show, and the plan previously ranked it #1 while attaching no number to it. Target: **10 agent conversations, 3 agents with a referral in progress, 1 signed referral.** The ask is *one free file for one of their insured fleets*, not a referral fee.
 - [ ] 2 ELD-reseller conversations — **introducing only, never white-label.** White-label contradicts `RISKS.md` §4 and §10, points at the $29 band, and would make 100% of revenue depend on one counterparty.
 - [ ] 50–100 Health Checks sent/week — but **only if they are automated**; at 45 minutes each, 100/week is a ceiling, not a target. The funnel arithmetic says ~1,160 Health Checks per 100 trucks, which no human can produce. **Automate the pull-and-render, or the funnel cannot open.** (Cold outbound converts at roughly 1 contract per 290 sends; one agent referring three fleets at warm rates is worth ~900 cold sends. **That is why the agent target above matters more than the outbound volume.**)
 - [ ] Publish the driver-facing HOS material (English, then translated on request); start the driver-group push.
