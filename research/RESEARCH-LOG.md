@@ -69,8 +69,8 @@ Recorded so they are not carried forward on my word.
 
 | Claim in earlier drafts | Status |
 |---|---|
-| "14 calendar days of records must be available in the ELD before driving" (cited to 395.8(b)(1)) | **Not found in current 395.8.** Current (b)(1) is the duty-status category list. The 14-day availability requirement exists in FMCSA guidance and in pre-2016 CFR text, but I could not locate its current paragraph. **Do not cite a paragraph number. Confirm with counsel and cite the guidance.** |
-| 395.3(e)(4)(ii) driver out-of-service criterion | Text not cleanly retrieved. Confirmed only that the section exists and that 395.8(e)(1) false report and 395.8(a) RODS violations carry OOS consequences in SMS data. **Confirm before use.** |
+| "14 calendar days of records must be available in the ELD before driving" (cited to 395.8(b)(1)) | **RESOLVED 2026-10-19: there is no such CFR paragraph.** Current (b)(1) is the duty-status category list. The requirement survives only in guidance. The operative CFR duties are 395.8(k)(2) (driver keeps the previous 7 consecutive days), 395.11(b) (driver submits supporting documents to the employer within 13 days), 395.11(c)(1) (carrier retains the five document categories 6 months) and 395.22(h)(3) (8 days of blank graph grids in the vehicle). **Do not cite a paragraph number for a 14-day rule. Cite the guidance and the retention rules.** |
+| 395.3(e)(4)(ii) driver out-of-service criterion | **RESOLVED 2026-10-19: 395.3(e)(4) DOES NOT EXIST.** Current 49 CFR 395.3(e) is titled "Short-haul operations" and contains only (e)(1) (150 air-mile radius driver) and (e)(2) (property-carrying CMV drivers not requiring a CDL). Verified against the Part 395 Subpart A table of contents at eCFR and Cornell LII. 395.7, 395.10, 395.12 and **395.15–395.19 are all [Reserved]**. **Do not cite it. It was never a rule.** |
 
 **What changed:** both removed from customer-facing and attorney-facing drafts until verified. A verification task added to the Gate 0 exit checklist.
 
@@ -360,7 +360,7 @@ Earlier entries in this log and in six project documents stated the sentence as 
 
 ### 5.6 Remaining verification items from the panel
 
-1. The 14-day ELD records-availability paragraph and 395.3(e)(4) — still unlocated (carried forward from §1.3).
+1. ~~The 14-day ELD records-availability paragraph and 395.3(e)(4)~~ — **BOTH CLOSED 2026-10-19. Neither exists as a CFR paragraph.** The retention rules are 395.8(k)(1), 395.8(k)(2), 395.11(b), 395.11(c)(1) and 395.22(h)(3). See §1.3. **Also closed today: 395.9 does not exist** — Part 395 skips it entirely and §§ 395.15–395.19 are [Reserved]. The administrative-review provisions that do exist are **385.15** (safety rating: 15 days for a proposed Unsatisfactory rating, otherwise 90 days) and **385.327** (failed new entrant safety audit: 90 days, 15 days for a decision before the prohibitions bite). See §5.7.
 2. The Sisic guilty-plea date: Oct 14 2020 (court docket) vs Oct 28 2020 (USAO-RI release). Reconcile before quoting.
 3. Whether Samsara Smart Compliance is planned for the US, and when — quarterly check; it is the deadline on the strategy.
 4. Whether Motive's Qualification Documents Expert Services is available in the US and at what price.
@@ -368,5 +368,88 @@ Earlier entries in this log and in six project documents stated the sentence as 
 6. The insurance cost per truck for a 15–75 PU fleet — two public sources disagree by an order of magnitude ($700–1,600 per unit per year vs $750–2,500+ per truck per month). Get 5 broker quotes.
 7. Whether an E&O policy can be written for a Moldova-domiciled provider, and whether an underwriter will write a citation indemnity. **Broker only; research cannot close it.**
 8. Whether the Moldova IT Park 7% turnover regime applies to this service. **Accountant only.**
-9. The New Entrant population's fleet-size distribution and the 8.7% fail rate as a countable list from the census file.
-10. Whether DotFleet, TenFour, Prime Fleet or any other provider already delivers a **source-documented** file — **if one of them does, our "file" shrinks to the refusal log and the whole positioning must narrow.** This is the single most important competitive check outstanding, and it should be run in the next 14 days.
+9. ~~The New Entrant population's fleet-size distribution and the 8.7% fail rate as a countable list from the census file.~~ — **CLOSED 2026-10-19.** Built: 44,959 carriers added in the last 10 months, **3,304 in the 3–12 PU band**, 194 at 13–25 PU. `research/build_new_entrant_list.py`; the Conditional-rated and out-of-service lists are `research/build_conditional_list.py` and `research/build_oos_list.py`. See §5.7.6.
+10. ~~Whether DotFleet, TenFour, Prime Fleet or any other provider already delivers a source-documented file.~~ — **CLOSED 2026-10-19, and the answer is favourable.** A sweep of the published market found **no vendor** selling a source-documented, driver-certified correction file, and **none** publishing a log of the corrections they refused to make. The closest was Sentinel's "ELD compliance support & log auditing" at $49–$99/driver/month, which is monitoring rather than a certified correction file. **The wedge holds — but the field is dense and cheaper than our ladder showed, so it must be defended on the driver certification and the refusal log, not on being first.** See §5.7.4 and `research/competition-landscape.md`.
+11. **NEW — whether a failed new entrant is publicly identifiable before revocation.** Still open, and it is now the highest-value item in this list. The new entrant safety audit produces a **pass/fail result, not a safety rating**, so a failed entrant does not appear through SAFER safety ratings; the out-of-service dataset (§5.7.6) is post-revocation only. If there is no pre-revocation public signal, the sale must be made in the register of a calendar rather than a crisis — which changes the pitch from "you have failed" to "you are due." Owner: Partner #1.
+12. **NEW — whether `safety_rating_date` in the census is the date of the *proposed* rating (the 385.11(c) clock start) or the date it became *final*.** If final, the computable deadline for a Conditional-rated carrier is wrong. Settle by triangulating `review_date` against the 385.11(a) 30-day notice rule on five carriers, or by asking FMCSA.
+
+### 5.7 The demand panel's research additions (2026-10-19, second pass)
+
+Written during a nine-lens panel on demand creation and deal mechanics. Grade A regulatory sources, read in full. This section closes the last three open citations and adds the demand map, the evidence standard, the competitive landscape and the two public target lists.
+
+#### 5.7.1 ✨ The evidence standard we had missed — 49 CFR 395.11 "Supporting documents"
+
+Effective 2017-12-18. Read in full at eCFR and Cornell LII, 2026-10-19. Per driver, per 24-hour period, to verify on-duty not driving time, a carrier must retain (395.11(c)(1)):
+
+1. each bill of lading, itinerary, schedule or equivalent document indicating origin and destination of each trip;
+2. each dispatch record, trip record or equivalent;
+3. each expense receipt related to any on-duty not driving time;
+4. each electronic mobile communication record reflecting communications transmitted through a fleet management system;
+5. each payroll record, settlement sheet or equivalent document indicating payment to a driver.
+
+Plus: 395.11(c)(2) — each document must carry the driver's name or PIN (or a unit number associable with the driver) and the time, convertible to local time at the location where it was recorded; 395.11(b) — the driver must submit supporting documents to the employer **within 13 days** of the 24-hour period or of coming into possession, whichever is later; 395.11(d)(1) — a carrier need not retain more than **eight** documents per driver per 24-hour period, but if it holds more it must retain those with the earliest and latest time indications; 395.11(f)(1) — on request during a roadside inspection the driver must make available any supporting document in his possession; 395.11(h) — a carrier may apply to FMCSA under 49 CFR Part 381 subpart C to use an approved self-compliance system.
+
+**Why this matters commercially.** Before this, our deliverable was "a source-documented correction file," which is a description. Now it is a **specified list of five document categories with named data elements, a retention cap, a submission window and a production obligation.** We are implementing a regulation that names its own evidence, rather than selling a point of view about paperwork.
+
+**And the corollary that hurts the current pitch.** FMCSA publishes the Safety Audit Resource Guide and the New Entrant training material **free**. Knowledge is not scarce. The scarce thing is the assembly, the retention discipline and the production readiness. Any message that sounds like "here is what you need to know" competes with a free PDF; only "we have it assembled and produced on demand" does not.
+
+#### 5.7.2 The demand map — five dated, document-driven events
+
+| # | Event | Clock | Evidence required | Reach |
+|---|---|---|---|---|
+| 1 | Driver gets an HOS violation | DataQs RDR; **14 calendar days** for the filer to upload documentation or the request is closed | 395.11 supporting documents | broadest, highest volume |
+| 2 | **Carrier gets a Conditional safety rating** | 385.11(c): 60 days for the proposed rating to go final. **385.17: request a rating change at any time**, on evidence of corrective action; FMCSA reviews within 45 days. **385.15: 90 days** to request administrative review (15 days if the rating is proposed Unsatisfactory) | written description of corrective actions + documentation | **2,125 carriers, 3–12 PU, active authority** |
+| 3 | New entrant safety audit | 385.319(c)(1) **60 days** / (c)(2) **45 days**; out-of-service order effective **day 61 / day 46** under 385.325(b); 385.325(c) bars interstate operation from that date | the full audit document set | ~58,600 audits/yr, 8.7% fail |
+| 3b | **Administrative review of a failed audit** | **385.327(c): 90 days**; and to obtain a decision before the 385.325(c) prohibitions bite, **15 days** | "any information or documents that support the new entrant's argument" | failed entrants only |
+| 4 | **Re-application after revocation** | **385.329(a): no sooner than 30 days** after revocation; the 18-month cycle restarts on approval | **385.329(b)(2): evidence that it has corrected the deficiencies** | 141 carriers flagged in the census |
+| 5 | **Insurance renewal** | none | — | where the money is |
+
+**3b and 4 are new and are the most under-exploited.** 385.327 is a document-submission event with a hard clock that no vendor found in our sweep appears to serve. 385.329(b)(2) is a *legal requirement* for a remediation evidence package — precisely this product — and it is revenue-positive re-entry: a carrier that failed, came back, and must now prove it corrected the deficiencies.
+
+#### 5.7.3 ✨ The correction to our own citations — five dead or miscited anchors
+
+| Was | Now | Why it mattered |
+|---|---|---|
+| CAP deadline cited to **385.321** | **385.319(c)(1)** 60 days / **(c)(2)** 45 days; enforced by **385.325(b)** (out-of-service day 61 / 46) and **385.325(c)** (interstate barred) | 385.321 is the auto-fail table, not the deadline. A buyer who checks finds the wrong section. |
+| "one bad log fails you" | **385.321(b) item 13** — 395.8(a) auto-fails at **"51% or more of examined records"** (same threshold for 396.17(a), item 16) | Our strongest-sounding claim was a checkable overstatement. The true version is *more* useful: it is a rate, and it converts dread into a measurement. |
+| "FMCSA audits every new carrier within 12 months" (flat) | 385.307 sets an **18-month** monitoring period; the audit follows once there are sufficient records, generally ≥3 months | A sceptic can disprove the flat version in one click. |
+| "Missing supporting documentation for RODS" is an automatic-fail regulation | **It is not in 385.321(b).** The sixteen are 382.x, 383.x, 387.x, 391.x, 395.8(a), 396.9(c)(2), 396.11(a)(3), 396.17(a). The supporting-document list is FMCSA's *Safety Audit Resource Guide*, not the auto-fail table. | Our claim that the audit "fails on our exact skill" was overstated. The correct reading is better for us: the exam is more likely to be failed on drug-and-alcohol, insurance and vehicle-inspection items — other people's jobs — while the *daily* paperwork is our product. |
+| **385.9** cited as the driver's violation-review route | **395.9 does not exist.** Part 395 skips it; §§ 395.15–395.19 are [Reserved]. **395.3(e)(4) does not exist** either — 395.3(e) is "Short-haul operations" with only (e)(1) and (e)(2). **There is no 14-day ELD records-availability paragraph in the current CFR.** | All three were open verification items carried since Gate 0. Two of them turned out to be dead citations, and the third is guidance-only. The real anchors are 385.15 and 385.327 for administrative review, and DataQs for a violation challenge. |
+
+#### 5.7.4 ✨ The competitive landscape — the market is denser and cheaper than our price ladder showed
+
+Full detail with per-vendor prices and sources: `research/competition-landscape.md`. The load-bearing findings:
+
+- **Sentinel Compliance HQ** — $29 / $49 / **$99** per driver per month. Pro includes new entrant safety audit preparation, DataQ challenge filings and **"ELD compliance support & log auditing."** Elite adds a dedicated compliance manager, IFTA, IRP, annual mock DOT audit, accident documentation, insurance coordination, quarterly reviews. Mock DOT Audit **$399**. Free compliance check as the lead magnet. No customer count, reviews or team disclosed; stage "Unfunded" per Tracxn. **Scale unverified.**
+- **EntrantReady** (Ghostly Gadgets LLC) — **$19.99/mo first truck + $10/mo each additional**, aimed at "brand-new owner-operators," free readiness check, publishes a free corrective-action-plan guide that **explicitly attacks the paid event product** ("anyone charging you hundreds to 'process your CAP' is charging you for typing"), and positions on *"we will never cold-call you."*
+- **Trucking Comply** — from $20/driver/mo; safety-audit prep from $250; unlimited mock audits.
+- Also found: My Safe Nest $150–200/truck, AIST $199–699/mo, TenFour $99–229, Lili $199–1,499, Prime Fleet $6,000/mo at 15 trucks, DotFleet $30/driver, TRAC, NRB, The DOT Doctor, The Trucker Consultant, LBC Fleet (500+ audits, 99.8% pass rate, 11 years), Eagle, SafeMile, Complys, X3 Fleet Safety.
+- **The published event band is $249–799** (NRB $249, ICG $350, Sentinel $399, Motor Carrier HQ $549, The Trucker Consultant $699, Lili $799, The DOT Doctor $999 sale / $2,500 list). Our plan's $1,500–4,000 was **2–5x the top of the market.**
+- **The wedge survives the sweep:** no vendor found sells a source-documented, driver-certified correction file, and none publishes a log of the corrections they refused to make. **And the channel is partly a competitor set** — many insurance agencies already bundle "insurance, bonds, compliance & IFTA."
+- **The human-consultant benchmark** (Grade C, FileFlo market guide): $1,500–3,000/month per carrier on retainer, $2,500–5,000 for a new entrant package, $3,000–10,000 for an audit-response package, $150–300/hour. **This is the reference class that makes $130/truck defensible — and it is a human-service reference class, not a software one.** The price decision is therefore a positioning decision.
+
+#### 5.7.5 ✨ The number that reframes the price
+
+Median **drivers per truck is exactly 1.00** in every power-unit band from 3 to 12, verified across **163,529** active property carriers from the census file. The aggregate of 1.46 is an artefact of a small tail of fleets reporting many drivers per truck.
+
+Per-driver competitors therefore convert almost 1:1 to per-truck for the median carrier. At six trucks: Sentinel Pro $294/mo, Sentinel Elite $594/mo, **ours $780/mo.** We are priced above a tier that bundles a dedicated compliance manager, IFTA, IRP, mock audits and insurance coordination. **This is the single most consequential finding in the session and it needs a decision, not a footnote.**
+
+#### 5.7.6 ✨ Two public target lists, and the honest size of each
+
+**The Conditional-rated list** (`research/build_conditional_list.py`): 2,125 carriers, 3–12 PU, active operating authority, Conditional rating, phone on file. Bucketed by freshness — **233 fresh (≤6 months, corrective-action window plausibly open), 244 recent (≤24 months, renewal conversation now), 1,648 standing (a live handicap on the record, no deadline).** The honest correction: only ~200–300 carriers a year are newly Conditional-rated in this band, so the stock is a *standing handicap* rather than a live deadline — which makes it an **insurance-and-broker** problem, and validates the agent channel far more strongly than the new-entrant deadline ever did. Top states: CA 144, TX 138, OH 113, IL 110, NC 94, IA 73, NJ 73.
+
+**The out-of-service list** (`research/build_oos_list.py`): FMCSA publishes a **daily** "OUT OF SERVICE ORDERS" dataset (Socrata `p2mt-9ige`), 402,655 rows, with USDOT, legal name, OOS date, reason, status and rescind date. Reason codes include **"New Entrant Revoked - Failure of Safety Audit" (43,442)**, "New Entrant Revoked - Refusal of Audit/No Contact" (314,470) and "Unsatisfactory = Unfit" (11,203). Of the audit-failure rows, **23,991 carry a rescind date — they re-registered.** That is the 385.329 population, publicly visible.
+
+**But the list is smaller than it looks, and two honesty checks are built into the script:**
+- 1,018 revocations in 2026; 265 with an order still active in the last 90 days.
+- Joined to the census for fleet size, status and phone: **146 carriers** are in the 3–12 PU band, failed within 24 months, and are still operating.
+- **Date coherence:** median 722 days between the census ADD_DATE and the OOS date, and 116 of 539 are 5+ years registered. **"New Entrant Revoked" in this dataset is a historical programme label applied across carrier vintages — not a list of recent new entrants.** Without this check the list would have been overstated by roughly an order of magnitude.
+- **Verdict: 146 is a validation set and a pilot list, not a market.** It is the highest-intensity buyer in the market — already failed, knows exactly what failed, legally obliged under 385.329(b)(2) to submit evidence it corrected the deficiencies, on a 30-day clock — but it is 146 carriers. The market-sized population is the Conditional-rated list.
+
+#### 5.7.7 ✨ The credibility risk in the motion itself
+
+FMCSA's own **"Aggressive or Fraudulent Marketing Guidance" (revised 11/2014, MC-ECC)** addresses this directly: *"motor carrier officials and new entrant applicants often receive confusing or misleading solicitations from service providers or third party administrators by telephone, e-mail, text and US Mail,"* and names among the things carriers get "pressured to immediately enroll in" — **"General FMCSA regulatory and compliance support."** The guidance also records that some solicitations imply or claim to be FMCSA officials, and that pretending to be a federal officer to obtain "any money, paper, document, or thing of value" can carry imprisonment under 18 USC 912. The **January 30, 2026 phishing alert** confirms the pattern is live now.
+
+Against that: our free cab review is a formal letterhead document citing CFR paragraphs, warning a carrier about a deadline, sent to the segment of the country explicitly trained to distrust exactly that. **In our own beachhead, our free artefact is the thing they were warned about.** And a direct competitor has built its brand on *"we will never cold-call you."*
+
+**Consequences:** (a) the free review must not read as a notice — different typography, no CFR cites on page one, no deadline language in the first line; (b) an argument against the New Entrant beachhead on trust grounds as well as churn grounds; (c) an argument for the Conditional-rated and renewal-driven segments, where the carrier has already had a formal letter from FMCSA and therefore knows the difference.

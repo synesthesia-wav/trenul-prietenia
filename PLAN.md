@@ -84,7 +84,7 @@ Result: we never edit a federal record. We produce the *documented, defensible* 
 
 Class 4 is written into the SOP, the training, and the contract. It is a control, not a formality — it is the answer to the E&O underwriter, to any carrier's risk manager, and to the record of federal prosecutions where carrier owners were charged with conspiracy to falsify records (see `research/RESEARCH-LOG.md` §1.4).
 
-**Two citations we could not verify and must not use until we do:** the current paragraph for the 14-day ELD records-availability requirement, and the text of 395.3(e)(4). Both are on the verification list in `research/memo-gate0.md`. Until then, the SOP cites 395.8(k)(2) (driver retains the previous 7 consecutive days) and 395.8(k)(1) (carrier retains 6 months), both of which are verified.
+**The two unverified citations are now closed, and neither survived: there is no 14-day ELD records-availability paragraph in the current CFR, and 395.3(e)(4) does not exist** (395.3(e) is "Short-haul operations," with only (e)(1) and (e)(2)). **395.9 does not exist either.** The SOP therefore cites 395.8(k)(2) (driver retains the previous 7 consecutive days), 395.8(k)(1) (carrier retains 6 months), 395.11(b) (13-day driver submission), 395.11(c)(1) (the five supporting-document categories) and 395.22(h)(3) (8 days of blank graph grids), all of which are verified. See `research/RESEARCH-LOG.md` §1.3 and §5.7.
 
 ---
 
