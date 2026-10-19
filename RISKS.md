@@ -6,19 +6,29 @@ Ranked by expected cost. Each entry: the risk, why it bites, the mitigation, and
 
 ## 1. Regulatory / criminal — the risk that ends the business
 
-**Risk.** Corrections that are not supported by source documents amount to falsification of records of duty status required under 49 U.S.C. § 31502, criminal under 18 U.S.C. § 1001 and 49 U.S.C. § 5215, and a "falsifying records" violation rated critical under 49 CFR 385.3. ELD edit histories are permanent and retrievable by FMCSA. It also voids the carrier's insurance for any loss tied to the falsified hours, and the carrier — also a criminal actor in that scenario — is the least likely party to complain, which is exactly what makes it a business that can grow until one inspection, one claim, or one criminal referral unwinds it.
+**Risk.** Corrections that are not supported by source documents amount to falsification of records of duty status required under 49 U.S.C. § 31502, and can be criminal under 18 U.S.C. § 1001. Under 49 U.S.C. § 521(h), anyone who "knowingly and willfully violates" the hours-of-service and recordkeeping provisions is, upon conviction, subject for each offense to a fine not to exceed $25,000 or imprisonment not to exceed one year (doubled for a subsequent offense). Separately, FMCSA rates 49 CFR 390.35 — "Making, or causing to make fraudulent or intentionally false statements or records and/or reproducing fraudulent records" — as an **acute** violation in the safety rating process (49 CFR Part 385, Appendix B), meaning it can drive an unsatisfactory safety rating on its own. ELD edit histories are permanent and retrievable by FMCSA. It also voids the carrier's insurance for any loss tied to the falsified hours, and the carrier — also a criminal actor in that scenario — is the least likely party to complain, which is exactly what makes it a business that can grow until one inspection, one claim, or one criminal referral unwinds it.
 
 **Why it bites.** "Only what documents support" is a *practice*, not a *policy*. It erodes under deadline pressure, under a loud carrier owner, and under a commission structure that rewards outcomes rather than process. A single fabrication discovered in an ELD edit history is exhibit A.
 
 **Mitigation.**
-- The 4-class correction SOP in `PLAN.md` §2, with Class 4 (unsupported reconstruction) as a mandatory logged refusal.
-- We never edit the ELD; the driver does. We prepare and document.
+- The 4-class correction SOP in `PLAN.md` §2 and `assets/hos-rods-reconciliation-checklist.md` §0, with Class 4 (unsupported reconstruction) as a mandatory logged refusal.
+- **We never edit the ELD.** 395.8(f)(2): "All entries relating to a driver's duty status must be legible and made by the driver." 395.30(f) forbids altering or erasing originals. Appendix A § 4.3.2.8(b) requires the device to prevent it. We propose in the carrier's support-personnel account (395.22(b)); the driver confirms, enters and recertifies (395.30(d)(1)).
+- **Never instruct, only ask.** 395.30(e) prohibits coercing a false certification. We request; the driver decides.
+- **A proposed edit is not a draft.** Per FMCSA Q5, if the driver is unavailable or unwilling to recertify, the proposed edit and annotation *remain part of the record*. Every correction we propose must be one we would defend on its merits. This is a design constraint, not a footnote.
 - The refusal log is retained and auditable. Review it monthly. A rising refusal count is a healthy sign, not a problem.
 - US transportation attorney's written opinion on the SOP before the first commercial contract.
 - The E&O underwriter reads the SOP. A carrier that declines to write because of the SOP is the most valuable feedback available.
 - If a carrier asks us to break the rule: end the relationship, not just the contract. Never renegotiate it.
 
 **Owner.** Partner #1 (SOP) + US attorney (opinion) + owner (logged refusals, reviewed monthly).
+
+**What the research changed (2026-10-19) — three material updates, all verified against the current CFR:**
+
+1. **The rule I had been citing is wrong, and the correct rule is better for us.** `395.8(e)(4)(ii)` does not exist in the current CFR — it was withdrawn by the November 2023 technical-corrections rule (89 FR 712, eff. 2024-01-05). The operative provisions are **395.30(d)**, which expressly permits the motor carrier to request edits with the driver confirming, rejecting, entering and recertifying, and 395.30(d)(3), which requires exactly that for "any system or any person other than the driver." **Our product is the regulation's own model.** This turns the risk section from a defence into a selling point: we are not hiding from the rule, we are the rule's workflow, and an attorney packet can say so in one paragraph.
+2. **The criminal exposure lands on the carrier owner, not on us** — provided we do not alter the record. *United States v. Sisic* (D.R.I. 2020): the owner of an **11-truck** carrier altered thousands of ELD entries for ~20 drivers to conceal driving and on-duty time; one driver died; guilty plea to conspiracy to falsify records (18 U.S.C. § 371), 18 months, $50,000, company defunct. Also *Belovs* (E.D. Pa. 2012, 15 counts, fatal crash, 18 months), *McClafferty* (E.D. Pa. 2003, 10 counts; six drivers plus the dispatcher and the company indicted), Nijjar Brothers (Cal., 13 drivers), and a 126-count Virginia indictment that added **wire fraud** (which is why our documented-correction standard is not optional). **Sisic is our target customer** — small fleet, owner-operated, an ELD and no compliance function. That is the strongest available evidence that the problem is real and that the current "solution" is to lie.
+3. **The device blocks part of the evasion.** Appendix A § 4.3.2.8.2(b) bars shortening automatically recorded driving time, and FMCSA's Q7 confirms driving time "cannot be edited or changed to non-driving time." The classic hours-shortening evasion is not merely illegal, it is technically blocked. Class 4 is therefore aligned with the regulation rather than stricter than it, and we can say so.
+
+**Open verification items — do not cite until confirmed.** The current paragraph for the 14-day ELD records-availability requirement, and the text of 395.3(e)(4). Both appeared in earlier drafts; neither could be located in the current CFR text during the 2026-10-19 research. See `research/RESEARCH-LOG.md` §1.3.
 
 ---
 
@@ -169,5 +179,59 @@ Ranked by expected cost. Each entry: the risk, why it bites, the mitigation, and
 - Every report carries a pull date and a source. Percentiles are pulled, never recalled; FMCSA SMS methodology changes and must be re-verified before each campaign.
 - The report is generated from a checklist, not from memory. Two-person check on anything quoted externally.
 - When the record is clean, say so. No manufactured problems.
+- **New (2026-10-19):** where a percentile is not assignable, say so rather than showing 0. FMCSA requires at least three driver inspections with violations before a carrier is assigned a percentile above zero in the HOS category, so for a small fleet there often is none. "No score because nobody has looked" is a finding; "score of 0" is a false reassurance and, if the owner checks SAFER and finds nothing assigned, it is a credibility failure.
+- **New (2026-10-19):** every violation code and severity weight is read off the current SMS Appendix A at the time of the report, not recalled. The codes and weights are in `assets/health-check-build-guide.md` §3 as a working order, not as a static table.
 
 **Owner.** Owner (report templates) + delivery lead (QA).
+
+---
+
+## 12. Price position — the market is denser than we assumed
+
+**Risk.** Published research (2026-10-19) shows the market we are entering is far more crowded and far cheaper than our plan assumed. The US managed-compliance band runs **$25–65 per truck per month** (Trucking Hub $29, Trucking Comply from $25, TruckingMBA $50–65, TenFour $38–99 per driver) and the offshore ELD-monitoring band runs **$60–80** (Turbo ELD, from $2/day per truck). Our $130 is roughly 2x the automation tier and ~2.2x the offshore anchor. It only defends against the staffed-HOS-desk tier (Prime Fleet Management, $60–250 per truck), where the buyer is comparing us to a full outsourced compliance department.
+
+**Why it bites.** A price that is 2x the cheapest credible alternative needs a reason the buyer can state to himself, and we have no published track record to supply that reason. Worse, the crowded low end could absorb our target segment: a 15-truck owner with a $29 software bundle and free FMCSA training has a perfectly reasonable cheaper answer. If we sell on price we lose; if we sell on quality and have no track record, we lose to the same buyer.
+
+**Mitigation.**
+- **Narrow the segment and hold the floor.** 15–75 truck fleets with a live hours-of-service problem. 10-truck minimum. Say no to smaller, and say no to fleets with clean records.
+- **Differentiate on the two things nobody in the comparison set foregrounds:** the audit-ready source-documented correction file, and a 24/7 response line with a named accountable human. Note that Turbo ELD advertises "auto-certify logbooks" — a claim that sits uneasily with 395.30(b)(1)–(2) and 395.8(f)(2). We do not make it, and we can quietly be the compliant alternative.
+- **Never run a price comparison.** Use the buyer's alternatives (in-house compliance manager at $180–350k/yr per Prime Fleet's own published comparison; an audit at $2–6k; a lawyer at $1.5–4k; one citation and its insurance consequence) and the Sisic case.
+- **Do not sell training or generic guidance.** FMCSA gives it away free. That caps the knowledge component of the price and forces the value onto execution.
+- **Watch the two closest competitors specifically** — Prime Fleet Management (structurally identical, same free-assessment lead magnet) and Turbo ELD (the $60 anchor, already multilingual). If either moves price materially, re-run the tiering.
+- **Track this in the quarterly review.** A price ladder that has moved against us is a signal to re-tier, not to discount.
+
+**Owner.** Owner (pricing and tiering) + partner #2 (competitive watch).
+
+---
+
+## 13. Metric obsolescence — our own reporting asset can be invalidated
+
+**Risk.** FMCSA is actively reorganising the Safety Measurement System: BASICs are becoming "compliance categories," Controlled Substances/Alcohol and operating-while-OOS violations are moving into Unsafe Driving, and data-sufficiency standards are changing. The Health Check, the monthly report and the quarterly renewal conversation are all built on SMS outputs. If FMCSA changes or retires a metric we report, the report stops being authoritative — and a compliance report that cites a retired metric reads as amateur to exactly the audience we need to impress.
+
+**Why it bites.** We have no track record and no brand. Our credibility is entirely "we know your record precisely." A stale methodology citation is the one error that undermines everything else we do, because the buyer can check it in five minutes.
+
+**Mitigation.**
+- The Health Check now leads with **counts and violation codes**, not percentiles. Counts survive a methodology change; percentiles and category names do not.
+- Re-download the SMS Methodology and Appendix A violations list before every campaign, and record the version on the report. The report already carries a methodology-version line for this reason.
+- Never hard-code a category name in customer-facing material. Read the label off the current page.
+- Assign an owner to watch FMCSA's rulemaking and methodology notices, and to reissue the template when anything changes.
+- The same applies to state rules (row 6 of the checklist): the matrix needs a named owner and a monthly update cadence, or it becomes a liability.
+
+**Owner.** Compliance lead (template and method) + delivery lead (version stamp).
+
+---
+
+## 14. Dependence on an unproven labour model
+
+**Risk.** The entire 24/7 model rests on one unverified number: about **6 unverified logs per truck per month**. The only source is a vendor's fleet calculator (ZenduELD) — grade C, a model assumption, not evidence. No published staffing-ratio study for outsourced ELD/log desks was found. If the real figure is 3x higher, the labour model breaks and $130/truck/month becomes impossible; if it is 3x lower, we are badly overpriced and the whole segment changes.
+
+**Why it bites.** The number determines FTE per 100 trucks, the 60–85 truck breakeven, the price floor and the tiering. Everything downstream inherits its error.
+
+**Mitigation.**
+- **Instrument the pilot from day one.** Count requests per truck per week by class, with the class mix. This is the first thing we measure, not a later refinement.
+- Build a second, independent estimate before the pilot: what comparable services claim (Prime Fleet implies daily monitoring), and what dispatchers say the real rate is (the interview guide, §D).
+- Model the business at 6, at 12 and at 18 logs/truck/month, and know which of the three we can survive.
+- Staff in stages against contracted trucks, not forecast trucks, so the roster never runs ahead of the revenue.
+- The cheapest structural protection is automation of the *monitoring* sweep (exception detection off the ELD feed) while keeping humans on the document reconciliation. That is not "building software" in the sense the partners object to; it is a rules engine over an existing feed, and it is the only way the 24/7 promise survives at 200 trucks.
+
+**Owner.** Delivery lead (measurement) + owner (staffing gates).

@@ -1,6 +1,8 @@
 # HOS COMPLIANCE REVIEW — CUSTOMER-FACING TEMPLATE
 
-> **How to use this file.** Everything in `{{ }}` is a placeholder. Section headings and the order are fixed — the report must fit on **one page** (or two if the checklist is a separate page, which it should be). Delete this instruction block before sending. See `health-check-build-guide.md` for sources, computation rules, and QA.
+> **How to use this file.** Everything in `{{ }}` is a placeholder. Section headings and the order are fixed — the report must fit on **one page**, with the checklist as a separate second page (which it should be, so it can be forwarded on its own). Delete this instruction block before sending. See `health-check-build-guide.md` for sources, computation rules, and QA.
+>
+> **Note on percentiles:** only include the percentile block **if a percentile is assignable**. FMCSA requires at least three driver inspections with violations before a percentile above zero is assigned in the HOS category. For a small fleet there often is no percentile. If there is not, delete the block and replace it with the "not enough data to score" line. **Never report a percentile of 0 for a carrier who has not been scored.**
 
 ---
 
@@ -21,16 +23,49 @@ Out-of-service rate:     {{X.XX}}% ({{N}} inspections, 24 months, retrieved {{PU
 Crashes (24 months):     {{N_fatal}} fatal · {{N_injury}} injury · {{N_towaway}} towaway
 
 ────────────────────────────────────────────────────────────
-SAFETY PERCENTILE RANKINGS (FMCSA)
+HOW MUCH OF YOUR RECORD WE COULD ACTUALLY SEE
 ────────────────────────────────────────────────────────────
-0 = best, 100 = worst. Calculated against a peer group of similar
-carriers. FMCSA methodology current as of {{VERSION/DATE}}.
+Driver inspections in 24 months:        {{N}}
+  of which resulted in a violation:    {{N}}
+Violations per driver inspection:       {{N.N}}
+{{IF N_driver_with_violations < 3:
+  FMCSA does not assign a safety percentile to a carrier until it has
+  at least three driver inspections with violations. You have {{N}},
+  so there is no score for you — not a good one, not a bad one.
+  No score means your record is largely unexamined, which is a
+  different problem from a poor one, and it is the one you can fix
+  this month.}}
+{{ELSE:
+  Safety percentile, Hours of Service:  {{P}}/100
+  (FMCSA ranks 0 as best and 100 as worst, against carriers of
+  similar size and type)                {{PLAIN READING}}}}
 
-  Unsafe Driving ................ {{P1}}/100   {{PLAIN READING}}
-  HOS Compliance ................ {{P2}}/100   {{PLAIN READING}}
-  Vehicle Maintenance ........... {{P3}}/100   {{PLAIN READING}}
-  Driver Fitness ................ {{P4}}/100   {{PLAIN READING}}
-  Controlled Substances/Alcohol . {{P5}}/100   {{PLAIN READING}}
+────────────────────────────────────────────────────────────
+WHAT IS IN YOUR VIOLATIONS
+────────────────────────────────────────────────────────────
+{{N}} violations in 24 months. Grouped by what they actually are,
+because most of them are paperwork, not driving.
+
+  Paperwork and certification                    {{N}} violations
+    - Log not certified by the driver             {{N}}
+    - Form and manner of the ELD record           {{N}}
+    - Shipping document / trailer number missing  {{N}}
+    - No blank log grids in the cab                {{N}}
+    - Records not produced on request              {{N}}
+
+  Records the carrier must manage                  {{N}} violations
+    - Unassigned driving time not explained        {{N}}
+    - ELD malfunction not reported within 24h      {{N}}
+    - Logbook not current                         {{N}}
+    - Seven days of logs not kept in the cab       {{N}}
+
+  Hours of service                                  {{N}} violations
+    - Beyond 11 hours / 14-hour window / break     {{N}}
+
+  (Weights in brackets are FMCSA's own severity weights. A weight of
+   1 is a paperwork error. A weight of 5 or 7 is the kind of finding
+   that lands on your safety score and can put a driver out of
+   service for the rest of the day.)
 
 ────────────────────────────────────────────────────────────
 WHAT WE FOUND ({{N}} items)
@@ -40,7 +75,7 @@ WHAT WE FOUND ({{N}} items)
    Why it matters: {{in risk or money terms, no rule citations}}
    Do this: {{the specific action}}
 
-2. [ACT THIS MONTH] {{...}}
+2. [ACT THIS WEEK] {{...}}
    Why it matters: {{...}}
    Do this: {{...}}
 
@@ -49,10 +84,6 @@ WHAT WE FOUND ({{N}} items)
    Do this: {{...}}
 
 4. [GOOD PRACTICE] {{...}}
-   Why it matters: {{...}}
-   Do this: {{...}}
-
-5. [GOOD PRACTICE] {{...}}
    Why it matters: {{...}}
    Do this: {{...}}
 
@@ -69,9 +100,9 @@ NEXT
 when a driver is on vacation?"}}
 
 Two options:
-  a) A 90-day pilot on 5–10 trucks: we handle the paperwork,
-     the driver questions and the correction files, business hours,
-     flat fee, credited in full against the contract.
+  a) A 90-day pilot on 5–10 trucks: we handle the paperwork, the
+     driver questions and the correction files, business hours, flat
+     fee, credited in full against the contract.
   b) Just the paperwork checklist on the next page, and we talk
      in a month if it is useful.
 
@@ -84,49 +115,64 @@ Two options:
 
 ```
 PAPERWORK CHECKLIST
-{{CARRIER LEGAL NAME}} · prepared {{DATE}} · all 8 items
+{{CARRIER LEGAL NAME}} · prepared {{DATE}} · in the order that matters
 
-1. Driver certification of the logbook
-   Every driver signs the certification for every day, including
-   days off. An unsigned log is treated as no log.
+1. Driver certification
+   The driver reviews, corrects and certifies the record, and certifies
+   again right after the last change of the day. An uncertified log is
+   treated as no log.
    Status: {{VERIFIED / NEEDS CHECK / UNKNOWN}}
 
-2. 14 days of records available before driving
-   A driver with fewer than 14 days of records in the ELD cannot
-   drive. Watch drivers returning from leave or after a device repair.
+2. Form and manner
+   Correct status selections, correct entries, correct record structure.
    Status: {{...}}
 
-3. Edits annotated and justified
-   Every edit needs a reason. Reconstructing past records is limited
-   to 14 days and must rest on the driver's own records and shipping
-   papers. The device keeps the edit history permanently.
+3. Blank log grids in the cab
+   A supply of blank paper graph grids for at least 8 days.
    Status: {{...}}
 
-4. Duty status continuity
-   No gaps, no overlapping duty periods, the 30-minute break logged,
-   and the 60/70-hour limit and 34-hour reset calculated correctly.
+4. Shipping document and trailer number
+   The number on the paperwork is entered or verified in the log.
    Status: {{...}}
 
-5. Logbook reconciled to the bill of lading
-   Pickup and delivery times on the rate con match the ELD, and the
-   time between them is real. This is the most common reason a record
-   is said not to reflect actual operations.
+5. Unassigned driving time
+   Every record of driving with no driver assigned is either explained
+   or assigned to the right driver. Kept 6 months, produced on request.
    Status: {{...}}
 
-6. State and lane rules
-   The rules for the states you run in differ from each other and
-   change. One fleet, three states, three rulebooks.
+6. ELD malfunctions
+   The driver notes the fault and the carrier gets written notice
+   within 24 hours.
    Status: {{...}}
 
-7. Retention and production
-   Six-month retention, and the ability to produce the last 14 days of
-   logbooks on demand, to law enforcement, within 48 hours. Retention
-   only helps if the retrieval works.
+7. Records current
+   The log is up to date to the last change of duty status.
    Status: {{...}}
 
-8. Roadside document readiness
-   Medical card, license, registration and insurance, correct ELD
-   status, and logbooks available in the cab.
+8. Records on request
+   The driver can produce and hand over their records to an inspector
+   on demand.
+   Status: {{...}}
+
+9. Retain and possess
+   You keep the records 6 months. The driver keeps the last 7 days in
+   the cab, available for inspection while on duty.
+   Status: {{...}}
+
+10. Submission
+   The driver hands the certified record to you within 13 days.
+   Status: {{...}}
+
+11. Driver access
+   Drivers can get their own records without having to ask you first.
+   Status: {{...}}
+
+12. State rules
+   The rules for each state you run in, and any that changed recently.
+   Status: {{...}}
+
+13. Hours of service
+   11 hours driving, 14-hour window, 30-minute break, 60/70 hours.
    Status: {{...}}
 
 Prepared from FMCSA public records and information provided by the carrier.
@@ -149,15 +195,32 @@ Out-of-service rate:     8.33% (12 inspections, 24 months, retrieved Mar 14)
 24-month violations:     3 total (3 driver, 0 vehicle)
 Crashes (24 months):     0 fatal · 1 injury · 0 towaway
 
-SAFETY PERCENTILE RANKINGS (FMCSA)
-0 = best, 100 = worst. Calculated against a peer group of similar carriers.
-FMCSA methodology current as of {{VERSION/DATE}}.
+HOW MUCH OF YOUR RECORD WE COULD ACTUALLY SEE
+Driver inspections in 24 months:        9
+  of which resulted in a violation:    3
+Violations per driver inspection:       0.33
+FMCSA does not assign a safety percentile to a carrier until it has
+at least three driver inspections with violations. You have 3, so there
+is no score for you — not a good one, not a bad one. No score means
+your record is largely unexamined, which is a different problem from a
+poor one, and it is the one you can fix this month.
 
-  Unsafe Driving ................ 42/100   Better than most peers your size
-  HOS Compliance ................ 88/100   In the worse part of your peer group
-  Vehicle Maintenance ........... 11/100   Among the better
-  Driver Fitness ................ 35/100   Better than most
-  Controlled Substances/Alcohol . 0/100    No violations of this type
+WHAT IS IN YOUR VIOLATIONS
+3 violations in 24 months.
+
+  Paperwork and certification                     2 violations
+    - Log not certified by the driver              1
+    - Form and manner of the ELD record            1
+
+  Records the carrier must manage                  1 violation
+    - Unassigned driving time not explained         1
+
+  Hours of service                                 0 violations
+
+  (Weights in brackets are FMCSA's own severity weights. A weight of
+   1 is a paperwork error. A weight of 5 or 7 is the kind of finding
+   that lands on your safety score and can put a driver out of
+   service for the rest of the day.)
 
 WHAT WE FOUND (4 items)
 
@@ -177,12 +240,13 @@ WHAT WE FOUND (4 items)
    hand.
    Do this: a one-page daily certification reminder for your drivers.
 
-3. [ACT THIS MONTH] Your records are stored and produced by the ELD only.
-   Why it matters: if an officer asks for the last 14 days of logbooks and
-   the retrieval is not instant, the inspection goes badly regardless of
-   how clean the driving was.
-   Do this: test the retrieval once this month, on a truck you do not
-   need.
+3. [ACT THIS MONTH] You have 3 records of driving with no driver assigned,
+   and nothing in your file explains them.
+   Why it matters: this is your obligation, not your driver's, and it is
+   the kind of finding that turns into a question you cannot answer at
+   the roadside.
+   Do this: pull the last 90 days of unidentified driving and either
+   explain the time or assign it to the right driver.
 
 4. [GOOD PRACTICE] Your vehicle maintenance record is in the best part of
    your peer group, and the driver files we can see are current.
@@ -212,4 +276,5 @@ Do you know who signs the certification when a driver is on vacation?
 - Any reference to the partners' prior 18-month record (under NDA).
 - Any competitor name.
 - Any claim that we edit, adjust, or reconstruct hours.
-- Any percentile or benchmark not pulled today.
+- Any percentile or benchmark not pulled today, and any percentile shown for a carrier who does not have one assigned.
+- Any number without a denominator beside it.

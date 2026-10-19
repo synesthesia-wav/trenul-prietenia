@@ -2,13 +2,27 @@
 
 The product. Everything a new employee reads on day one, and everything a carrier can be shown during a pilot.
 
+> **Legal basis, verified 2026-10-19 against the current CFR.** Every citation below was read in full at eCFR and cross-checked at Cornell LII. Earlier drafts of this document cited 49 CFR 395.8(e)(4)(ii) for the correction rules; **that paragraph does not exist in the current CFR** and has been removed from this document. The governing rules are 395.30(d), 395.30(c)(2), 395.30(e), 395.30(f), 395.8(f)(2), 395.8(k), 395.22, 395.32, 395.36 and Appendix A to Subpart B §§ 4.3.2.8 and 4.3.3. Full citations and evidence: `research/RESEARCH-LOG.md` §1.2. **Two citations remain unverified and are deliberately absent from this document: the current paragraph for the 14-day ELD records-availability requirement, and the text of 395.3(e)(4). Confirm both with counsel before adding them anywhere.**
+
 ---
 
 ## 0. Two hard rules (non-negotiable, no exceptions, no verbal overrides)
 
-**Rule 1 — We never edit a driver's ELD.** Under 49 CFR 395.8(e)(4)(ii) the driver makes entries into the ELD, and every edit is recorded in an edit history that FMCSA can retrieve. A vendor editing a driver's record leaves a third party's fingerprint in a federal record. So: **we research, prepare, and document; the driver (or an authorized carrier official) makes the entry and signs off.** This is also our best sales point — we can hand an inspector a file for every correction because we never made the changes ourselves.
+**Rule 1 — We never edit a driver's ELD.** 49 CFR 395.8(f)(2): "All entries relating to a driver's duty status must be legible and **made by the driver**." 395.30(f) forbids altering or erasing the original information or the source data streams. Appendix A § 4.3.2.8(b) requires the device itself to prevent alteration or erasure of the original record.
 
-**Rule 2 — We never propose a correction the source documents do not support.** Not for a large customer, not as a favor, not "just this once." If the documents and the driver's account conflict, we escalate to the carrier and log it. If the request is to reconstruct hours that were not driven, we decline in writing and log the refusal. A refusal log is a control, and it is the first thing an E&O underwriter and an investigator will want to see. A carrier that asks us to break Rule 2 ends the relationship, not just the contract.
+What we do instead is what the regulation explicitly contemplates. 395.30(d)(1): "the motor carrier may request edits to a driver's records of duty status to ensure accuracy. **A driver must confirm or reject any proposed change, implement the appropriate edits** ... and recertify and resubmit the records." 395.30(d)(3): "**Edits requested by any system or by any person other than the driver must require the driver's electronic confirmation or rejection.**"
+
+So: **we research, prepare, document and propose; the driver decides, enters and certifies.** We work in the carrier's authorized support-personnel role (395.22(b)(1), (d), (e)) — named accounts, proper log-in, no shared credentials. The support-personnel account is where the proposal lives; it is not where the entry happens.
+
+This is also our strongest sales point: we can hand an inspector a document for every correction, because we never made the changes ourselves.
+
+**Rule 2 — We never propose a correction the source documents do not support.** Not for a large customer, not as a favour, not "just this once." If the documents and the driver's account conflict, we escalate to the carrier and log it. If the request is to create or erase driving time, to shorten automatically recorded driving time, or to alter the original record, we decline in writing and log the refusal.
+
+The law is on our side of this line, and it is not a close call: 395.8(e)(1) makes a false report in connection with a duty status unlawful; Appendix A § 4.3.2.8.2(b) means the device will not even let automatically recorded driving time be shortened; FMCSA's Q7 confirms that "driving time ... cannot be edited or changed to non-driving time." And the consequence for carriers who do it themselves is not a fine — *United States v. Sisic* (D.R.I. 2020) is an 11-truck carrier's owner who altered thousands of ELD entries, pleaded guilty to conspiracy to falsify records, and served 18 months while his company went defunct.
+
+A refusal log is a control, and it is the first thing an E&O underwriter and an investigator will want to see. A carrier that asks us to break Rule 2 ends the relationship, not just the contract.
+
+**The risk Rule 1 does not remove.** Per FMCSA's Editing and Annotations Q5, if the driver is unavailable or unwilling to recertify, **the carrier's proposed edit and annotation remain part of the record.** A proposed edit is not a harmless draft. Every correction we propose must be one we would defend on its merits, and the driver must be asked rather than assumed. Never queue a proposal we would not want an inspector to read.
 
 Everything below is the machinery that makes those two rules hold at 2am on a Sunday with 200 trucks.
 
@@ -35,39 +49,50 @@ Applied to every request, in this order, every time.
 ```
 REQUEST RECEIVED
 │
-├─ Q1. Is this a true typographical error?
-│      (single character or field; does NOT change a duty status,
-│       a timestamp, or a driving-hours figure)
-│      ├─ YES → CLASS 1 — Typographical
-│      │        Driver corrects it. We log it. No documents needed.
-│      │        (395.8(e)(4)(ii) exception for typographical edits)
+├─ Q1. Is this a clerical error — a field, a name, a trailer number,
+│      a form entry, a certification, a missing shipping-document
+│      number — that does NOT change a duty status, a timestamp,
+│      or any hours figure?
+│      ├─ YES → CLASS 1 — Clerical
+│      │        Driver or carrier support personnel corrects it.
+│      │        Annotation with the reason (395.30(c)(2)). Logged.
 │      └─ NO ↓
 │
 ├─ Q2. Does the request change a duty status, a timestamp, or hours?
-│      ├─ NO → CLASS 1 (if clerical) or Class 3 (if disputed) — route accordingly
+│      ├─ NO → CLASS 1 (if clerical) or CLASS 3 (if disputed)
 │      └─ YES ↓
 │
-├─ Q3. Is the change supported by a source document?
+├─ Q3. Has the driver already submitted these records to the carrier?
+│      (395.30(d)(2) — no edits may be requested before submission)
+│      ├─ NO → CLASS 3 — Not yet reviewable
+│      │        We do not propose anything. We tell the driver when
+│      │        the record becomes reviewable. Logged.
+│      └─ YES ↓
+│
+├─ Q4. Is the change supported by a source document?
 │      (BOL / rate con / dispatch record / GPS or stop trace /
 │       scale ticket / fuel card / proof of delivery / driver's
 │       own contemporaneous personal record)
 │      ├─ NO and the driver says the hours WERE worked
 │      │    → CLASS 3 — Disputed / Undocumented
 │      │        We do NOT propose a correction.
-│      │        We tell the driver exactly what document would support it.
-│      │        We log it. We notify the carrier.
+│      │        We tell the driver exactly what document would
+│      │        support it. Logged. Carrier notified.
 │      └─ YES ↓
 │
-├─ Q4. Is it within 14 days of the date of the record, and does the
-│      document support the specific change requested?
+├─ Q5. Is it within the submission window — i.e. within 13 days of
+│      the 24-hour period (395.8(a)(2)(ii)) — and does the document
+│      support the specific change requested?
 │      ├─ NO → CLASS 3 — Disputed / Out of window
 │      │        No correction. Logged. Carrier notified.
 │      └─ YES ↓
 │
 └─ CLASS 2 — Document-supported
-         We prepare the correction + evidence pack.
-         The driver (or authorized carrier official) enters it and signs.
-         We log it and retain the pack.
+         We prepare the correction + the annotation + the evidence
+         pack, and the proposal is placed in the carrier's
+         support-personnel account (395.22(b)).
+         The driver confirms or rejects, enters, and recertifies
+         (395.30(d)(1)). We log it and retain the pack.
 ```
 
 **Explicit refusal trigger (Rule 2).** If the request is, in substance, *"make it look like I drove these hours"* or *"remove this violation"* — i.e. the requested change is not supported by any document, or is supported only by the driver's assertion — that is a Class 4 event:
@@ -77,7 +102,11 @@ REQUEST RECEIVED
 3. Notify the shift lead. If the same driver or the same carrier requests it again within 30 days, the supervisor notifies the owner.
 4. If a carrier instructs us to proceed after a refusal, the supervisor declines on our side and the owner decides whether to end the relationship.
 
-**Never** correct a violation to make it disappear. Correct the *record* so it is accurate — sometimes the accurate record still contains the violation, and that is the correct outcome.
+**Never** correct a violation to make it disappear. Correct the *record* so it is accurate — sometimes the accurate record still contains the violation, and that is the correct outcome. Note also that Appendix A § 4.3.2.8.2(b) means the device will not allow automatically recorded driving time to be shortened at all, and FMCSA's Q7 confirms it. Any request that requires it is a Class 4 event by definition, not by policy.
+
+**Separate service line — unassigned driving time (395.32(c)).** Records of unidentified driving must be reviewed by the carrier and either annotated (explaining why the time is unassigned) or assigned to the correct driver, retained 6 months, and produced on inspection. Violation code 395.32B carries a **severity weight of 5**. This is recurring, mechanical, and currently unowned by most small fleets. It is a distinct work item in the weekly routine below, and it is one of the highest-leverage things we can do for a customer because it is a weight-5 violation that appears in their own SMS profile.
+
+**Separate service line — ELD malfunctions (395.34).** A driver who fails to note an ELD malfunction and give written notice to the carrier within 24 hours is a **weight-5 violation** (395.34A1-ELDDFN). It is a phone call and a form. Include it in the weekly routine.
 
 ---
 
@@ -97,7 +126,7 @@ REQUEST RECEIVED
 | Request text | Driver's own words, verbatim — do not paraphrase the request |
 | Related dates | Trip date, delivery date, timeframe involved |
 | Documents supplied | BOL, rate con, POD, photos, etc. — list what arrived and what is missing |
-| Triage class | 1 / 2 / 3 / 4 (filled by the operator, confirmed by the reviewer for Class 2) |
+| Triage class | 1 Clerical / 2 Document-supported / 3 Disputed / 4 Refused (filled by the operator; Class 2 confirmed by the reviewer) |
 | SLA | Clock start, first response, resolution |
 | Outcome | Resolved / escalated / refused / pending documents |
 
@@ -127,11 +156,14 @@ RECONCILIATION
   Basis for the proposed change: {{one sentence}}
   Is the change supported?      YES / NO → if NO, this is Class 3 or 4
 
-PROPOSED CORRECTION (for the driver or authorized carrier official to enter)
+PROPOSED CORRECTION (proposed by us; entered and certified by the driver)
   Field: {{eld field}}  From: {{current value}}  To: {{proposed value}}
-  Reason: {{short, plain language}}
-  Note: this entry is made by the driver / authorized official. We do not
-  edit the ELD.
+  Annotation (required, 395.30(c)(2)): {{short, plain language reason}}
+  Status: PROPOSED in the carrier's support-personnel account (395.22(b))
+  Note: the driver confirms or rejects, makes the entry, and recertifies
+  (395.30(d)(1)). We never edit the ELD. If the driver does not recertify,
+  this proposal REMAINS PART OF THE RECORD (FMCSA Q5) — which is why we
+  only ever propose a correction we would defend on its merits.
 
 PREPARED BY · REVIEWED BY · SENT TO DRIVER · DRIVER CONFIRMED · LOGGED
 ```
@@ -163,7 +195,7 @@ One row per correction attempt, every class, including refusals. This table is t
 | `outcome` | what the carrier or driver did next |
 | `notes` | anything that matters later |
 
-**Retention:** logs and evidence packs retained **24 months** minimum. The driver's own records are subject to the 6-month retention rule (395.8(j)), but our audit trail must outlive it, because an inspection of an old trip can arrive late.
+**Retention:** logs and evidence packs retained **24 months** minimum. The driver's own records are subject to the 6-month retention rule (395.8(k)(1)), but our audit trail must outlive it, because an inspection of an old trip can arrive late.
 
 ---
 
@@ -173,11 +205,13 @@ Proactive. This is what "we don't wait for problems" means in practice, and it i
 
 | When | What | Output |
 |---|---|---|
-| **Daily (automated or manual sweep)** | ELD exception feed: unassigned driving time, duty-status gaps, no-break violations, unlogged off-duty periods, device faults, edits without annotation | Exception list, triaged same shift |
+| **Daily (automated or manual sweep)** | ELD exception feed: unassigned driving time (395.32B), duty-status gaps, no-break violations, unlogged off-duty periods, device faults (395.34), edits without annotation, missing certification (395.30B1), blank graph grids (395.22H4), missing shipping-document or trailer number (395.24C2III / 395.24C2II-ELDTN) | Exception list, triaged same shift |
 | **Daily** | Drivers with a certification or document gap identified overnight | Same-day driver nudge (message, not a call unless urgent) |
 | **Weekly** | Reconcile a sample of at least 20% of managed trucks' trips against BOL/rate con/POD | Reconciliation log; corrections raised; disputes escalated |
 | **Weekly** | Reject/verify: every Class 2 correction from the week reviewed by a second person | QA sign-off |
-| **Weekly** | Expired medical certificates, expiring driver licences, MV-1/annual review dates, 6-month retention due | Compliance calendar entries, flagged to the carrier |
+| **Weekly** | **Unassigned driving time (395.32(c))** — review every unidentified-driving record: annotate why the time is unassigned, or assign it to the correct driver. Retain 6 months; producible on inspection. | Annotated or assigned. Weight-5 violation if missed. |
+| **Weekly** | **ELD malfunction reports (395.34)** — did every driver note a malfunction and give written notice to the carrier within 24 hours? | Malfunction log completed; driver coached. Weight-5 violation if missed. |
+| **Weekly** | Expired medical certificates, expiring driver licences, MV-1/annual review dates, 6-month retention due (395.8(k)(1)) | Compliance calendar entries, flagged to the carrier |
 | **Weekly** | State/lane rule changes affecting this fleet's lanes (from the maintained matrix) | Note to the carrier if it affects them |
 | **Monthly** | Full fleet reconciliation (all trucks) + report | The monthly report (§8) |
 | **Quarterly** | Re-pull the carrier's FMCSA record; compare to the pre-engagement baseline | Percentile movement note — the renewal conversation |
@@ -278,7 +312,7 @@ Section 8 is not optional. A report that admits what it could not do is worth mo
 |---|---|
 | 0 | Contract, SLA, authorization form (who may request corrections), data access, DPA |
 | 1 | ELD access live; pull the carrier's FMCRA baseline record; request BOL/rate con/POD feed |
-| 2 | Driver roster with trucks and ELD devices; identify the 14-day records exposure (395.8(b)(1)) |
+| 2 | Driver roster with trucks and ELD devices; check that each driver has the previous 7 consecutive days of records available (395.8(k)(2)) and that no one is driving without a reviewable record |
 | 3 | Baseline reconciliation: 20% of trucks, to find the existing defects |
 | 4 | First exception sweep; driver nudges; certification reminder issued |
 | 5 | First weekly reconciliation; first correction evidence packs |
