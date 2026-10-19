@@ -1,0 +1,6 @@
+# Agent harness state (not project content)
+.opencode/
+.pi/
+
+# OS
+.DS_Store
