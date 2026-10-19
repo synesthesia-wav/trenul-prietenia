@@ -25,7 +25,7 @@ Ranked by expected cost. Each entry: the risk, why it bites, the mitigation, and
 **What the research changed (2026-10-19) — three material updates, all verified against the current CFR:**
 
 1. **The rule I had been citing is wrong, and the correct rule is better for us.** `395.8(e)(4)(ii)` does not exist in the current CFR — it was withdrawn by the November 2023 technical-corrections rule (89 FR 712, eff. 2024-01-05). The operative provisions are **395.30(d)**, which expressly permits the motor carrier to request edits with the driver confirming, rejecting, entering and recertifying, and 395.30(d)(3), which requires exactly that for "any system or any person other than the driver." **Our product is the regulation's own model.** This turns the risk section from a defence into a selling point: we are not hiding from the rule, we are the rule's workflow, and an attorney packet can say so in one paragraph.
-2. **The criminal exposure lands on the carrier owner, not on us** — provided we do not alter the record. *United States v. Sisic* (D.R.I., Crim. No. 20-63MSM): the owner of an **11-truck** carrier altered thousands of ELD entries for ~20 drivers to conceal driving and on-duty time; one driver died in an April 22, 2018 Oklahoma crash; guilty plea to conspiracy to falsify records (18 U.S.C. § 371) on Oct 14, 2020; **sentenced Jan 25, 2021 to three years' probation including six months' home incarceration with electronic monitoring, 50 hours' community service, a $1,000 fine and a $100 special assessment**; **FMCSA suspended and proposed a three-year debarment on Apr 29, 2021 and debarred him on Aug 19, 2021**; company defunct. *(Corrected 2026-10-20 — earlier drafts said "18 months, $50,000", which was the prosecution's sentencing recommendation, not the judgment. See `research/RESEARCH-LOG.md` §1.4.)* Also: *Belovs* (E.D. Pa. 2012, 15 counts, fatal crash, 18 months), *McClafferty* (E.D. Pa. 2003, 10 counts; six drivers plus the dispatcher and the company indicted), Nijjar Brothers (Cal., 13 drivers), and a 126-count Virginia indictment that added **wire fraud** (which is why our documented-correction standard is not optional). **Sisic is our target customer** — small fleet, owner-operated, an ELD and no compliance function. That is the strongest available evidence that the problem is real and that the current "solution" is to lie.
+2. **The criminal exposure lands on the carrier owner, not on us** — provided we do not alter the record. *United States v. Sisic* (D.R.I., Crim. No. 20-63MSM): the owner of an **11-truck** carrier altered thousands of ELD entries for ~20 drivers to conceal driving and on-duty time; one driver died in an April 22, 2018 Oklahoma crash; guilty plea to conspiracy to falsify records (18 U.S.C. § 371) on Oct 14, 2020; **sentenced Jan 25, 2021 to three years' probation including six months' home incarceration with electronic monitoring, 50 hours' community service, a $1,000 fine and a $100 special assessment**; **FMCSA suspended and proposed a three-year debarment on Apr 29, 2021 and debarred him on Aug 19, 2021**; company defunct. *(Corrected 2026-10-19 — earlier drafts said "18 months, $50,000", which was the prosecution's sentencing recommendation, not the judgment. See `research/RESEARCH-LOG.md` §1.4.)* Also: *Belovs* (E.D. Pa. 2012, 15 counts, fatal crash, 18 months), *McClafferty* (E.D. Pa. 2003, 10 counts; six drivers plus the dispatcher and the company indicted), Nijjar Brothers (Cal., 13 drivers), and a 126-count Virginia indictment that added **wire fraud** (which is why our documented-correction standard is not optional). **Sisic is our target customer** — small fleet, owner-operated, an ELD and no compliance function. That is the strongest available evidence that the problem is real and that the current "solution" is to lie.
 3. **The device blocks part of the evasion.** Appendix A § 4.3.2.8.2(b) bars shortening automatically recorded driving time, and FMCSA's Q7 confirms driving time "cannot be edited or changed to non-driving time." The classic hours-shortening evasion is not merely illegal, it is technically blocked. Class 4 is therefore aligned with the regulation rather than stricter than it, and we can say so.
 
 **Open verification items — do not cite until confirmed.** The current paragraph for the 14-day ELD records-availability requirement, and the text of 395.3(e)(4). Both appeared in earlier drafts; neither could be located in the current CFR text during the 2026-10-19 research. See `research/RESEARCH-LOG.md` §1.3.
@@ -238,7 +238,7 @@ Ranked by expected cost. Each entry: the risk, why it bites, the mitigation, and
 
 ---
 
-## 15. The refusal log is discoverable as an admission (new, 2026-10-20)
+## 15. The refusal log is discoverable as an admission (new, 2026-10-19)
 
 **Risk.** The refusal log is, on the strategy panel's agreement, the single strongest asset we have: it is the only thing a competitor cannot ship, and it is the artefact that makes us credible without a track record. It is also a **written record that the carrier asked us to make a correction the paperwork did not support.** Read by a carrier's own attorney, or produced in a civil discovery, it could look like a written confession that the fleet was seeking falsification — and it would be the single most damaging document in the file.
 
@@ -255,7 +255,7 @@ Ranked by expected cost. Each entry: the risk, why it bites, the mitigation, and
 
 ---
 
-## 16. The category is commoditising from both ends (new, 2026-10-20)
+## 16. The category is commoditising from both ends (new, 2026-10-19)
 
 **Risk.** Two platforms are building the layer we are selling, and one of them has already shipped the workflow.
 
@@ -277,7 +277,7 @@ Ranked by expected cost. Each entry: the risk, why it bites, the mitigation, and
 
 ---
 
-## 17. The "New Entrant" beachhead may be a small, poor, and shrinking pool (new, 2026-10-20)
+## 17. The "New Entrant" beachhead may be a small, poor, and shrinking pool (new, 2026-10-19)
 
 **Risk.** Tier 0 is the strongest-looking segment we found, and it is the newest, least validated idea in the plan. Three ways it could disappoint:
 - **56% of New Entrant exits are "inactive, change, no show at the safety audit, no contact."** The population contains a large share of carriers who will not pay for anything.
@@ -298,7 +298,7 @@ Ranked by expected cost. Each entry: the risk, why it bites, the mitigation, and
 
 ---
 
-## 18. The specialist competitor is closer than we modelled (new, 2026-10-20)
+## 18. The specialist competitor is closer than we modelled (new, 2026-10-19)
 
 **Risk.** DotFleet Compliance is not a distant competitor in a different segment. It is a **remote, single-regulation, published-price, per-driver, 100%-remote compliance desk for fleets of 1-50 trucks** — our exact operational shape — with a free file review as its magnet, Mon-Fri 8am-6pm CT coverage, and a one-business-day response promise. It also refuses HOS explicitly, which is our opening, but it demonstrates that the shape works and that a well-positioned specialist in this market publishes two prices and nothing else.
 
@@ -321,6 +321,6 @@ Ranked by expected cost. Each entry: the risk, why it bites, the mitigation, and
 | 2026-10-19 | 395.8(e)(4)(ii) withdrawn as a citation (does not exist in the current CFR); the governing rules are 395.30(d)/(c)(2)/(e)/(f), 395.8(f)(2), 395.8(k), 395.22, 395.32, 395.36 and Appendix A 4.3.2.8. Verified in full against eCFR and Cornell LII. |
 | 2026-10-19 | 49 U.S.C. 5215 corrected to 49 U.S.C. 521(h) - up to $25,000 and one year per offence, doubled on a subsequent offence. |
 | 2026-10-19 | 49 CFR 390.35 fraudulent records reclassified from "critical" to **acute** in 49 CFR Part 385 Appendix B. Acute violations can produce an unsatisfactory safety rating on their own. |
-| 2026-10-20 | **Sisic sentence corrected.** "18 months, $50,000" was the prosecution's sentencing recommendation. The judgment of 25 January 2021 was three years' probation including six months' home incarceration, 50 hours' community service, a $1,000 fine and a $100 special assessment, plus a three-year FMCSA debarment. Corrected in six documents. |
-| 2026-10-20 | Price ladders reconciled between `PLAN.md` and `SALES-PLAYBOOK.md` (a 15-truck fleet was $1,950/mo in one and $2,250 in the other). The $110 tier at 50+ trucks deleted as loss-making. |
-| 2026-10-20 | Risk 2 ("no publishable track record") and the new risks 12-15 added following the strategy panel. |
+| 2026-10-19 | **Sisic sentence corrected.** "18 months, $50,000" was the prosecution's sentencing recommendation. The judgment of 25 January 2021 was three years' probation including six months' home incarceration, 50 hours' community service, a $1,000 fine and a $100 special assessment, plus a three-year FMCSA debarment. Corrected in six documents. |
+| 2026-10-19 | Price ladders reconciled between `PLAN.md` and `SALES-PLAYBOOK.md` (a 15-truck fleet was $1,950/mo in one and $2,250 in the other). The $110 tier at 50+ trucks deleted as loss-making. |
+| 2026-10-19 | Risk 2 ("no publishable track record") and the new risks 12-15 added following the strategy panel. |

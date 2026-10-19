@@ -4,7 +4,7 @@ Companion to `PLAN.md`. Written for the person making the owner-level calls.
 
 ---
 
-> **Revised 2026-10-20 after the strategy panel.** The previous opening line was "You will never get a call about a logbook again" - the panel's judgement was that it positions us as nuisance removal, a virtual assistant, which is a $29 comparison and a bookkeeper comparison. The buyer's problem is not calls; it is exposure. The 24/7 claim is gone from the pitch entirely. See `research/strategy-memo.md`.
+> **Revised 2026-10-19 after the strategy panel.** The previous opening line was "You will never get a call about a logbook again" - the panel's judgement was that it positions us as nuisance removal, a virtual assistant, which is a $29 comparison and a bookkeeper comparison. The buyer's problem is not calls; it is exposure. The 24/7 claim is gone from the pitch entirely. See `research/strategy-memo.md`.
 
 ## 1. The offer, by who is in the room
 
@@ -32,7 +32,7 @@ Use the version that matches who's in the room.
 
 ## 2. The HOS Health Check — now a pre-qualification filter, not a magnet
 
-> **Repositioned 2026-10-20 by the strategy panel.** The Health Check is built on free public data the buyer can pull in ten minutes, so handing it to the market announces that we hold nothing proprietary. It is also aimed at a population whose public record is *empty by design* - FMCSA will not assign a percentile without three driver inspections with violations, so for our target segment the honest output is often "we can't tell you." That is a fine filter and it is not a magnet.
+> **Repositioned 2026-10-19 by the strategy panel.** The Health Check is built on free public data the buyer can pull in ten minutes, so handing it to the market announces that we hold nothing proprietary. It is also aimed at a population whose public record is *empty by design* - FMCSA will not assign a percentile without three driver inspections with violations, so for our target segment the honest output is often "we can't tell you." That is a fine filter and it is not a magnet.
 >
 > **What it becomes:** (a) a **pre-qualification filter** we use before spending time on a carrier, and (b) a **cover page inside the file**, which is the actual product. It is also, for an insurance agent, a free loss-prevention tool with their name on it - which is how the channel gets built.
 >
@@ -92,7 +92,7 @@ Use the version that matches who's in the room.
 - **A carrier whose hours-of-service record is already clean.** We have no published track record, so we cannot beat a clean record on results.
 - Anyone who wants us to *edit* the ELD for them or to "make the hours work." Decline, politely, and permanently. See section 8.
 
-**Pricing ladder (reconciled 2026-10-20 - identical to `PLAN.md` section 5.2, which previously contradicted this table):**
+**Pricing ladder (reconciled 2026-10-19 - identical to `PLAN.md` section 5.2, which previously contradicted this table):**
 | Active power units | Price | Floor |
 |---|---|---|
 | 1-14 | $150 / truck / mo | $1,500 / mo |

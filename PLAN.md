@@ -1,6 +1,6 @@
 # ELD Support Services — Go-To-Market Plan
 
-**Status:** revised 2026-10-20 after the strategy panel (eight frameworks, applied in parallel) — see `research/strategy-memo.md`
+**Status:** revised 2026-10-19 after the strategy panel (eight frameworks, applied in parallel) — see `research/strategy-memo.md`
 **Price:** $130 / truck / month (a hypothesis until the owner interviews; see §11)
 **Delivery model:** human, document-based corrections; **the product is the file**, not the desk
 **Position:** managed hours-of-service compliance — a specialist desk inside outsourced compliance
@@ -90,7 +90,7 @@ Class 4 is written into the SOP, the training, and the contract. It is a control
 
 ## 3. Positioning
 
-> **Rewritten 2026-10-20 by the strategy panel.** The old one-liner and ad led with 24/7, which the panel judged to be a $29 comparison in disguise — a virtual assistant, not a compliance desk — and a promise the roster cannot fund at our size. The new line leads with the file and contains no feature noun a competitor already claims (no 24/7, no multilingual, no price). Full reasoning in `research/strategy-memo.md` §1.3.
+> **Rewritten 2026-10-19 by the strategy panel.** The old one-liner and ad led with 24/7, which the panel judged to be a $29 comparison in disguise — a virtual assistant, not a compliance desk — and a promise the roster cannot fund at our size. The new line leads with the file and contains no feature noun a competitor already claims (no 24/7, no multilingual, no price). Full reasoning in `research/strategy-memo.md` §1.3.
 
 **One line:** *When somebody with authority asks about your records, you want a file behind you, not an excuse. We are the hours-of-service desk for fleets like yours: we check every log against the bill of lading and the rate con, we prepare each correction with the document that supports it, and your driver certifies it. We never touch the log.*
 
@@ -132,13 +132,13 @@ The competing offshore price is confirmed at **$80 per truck per month**. Resear
 - **Differentiate on the audit-ready correction file and the 24/7 response line**, because neither Prime Fleet nor Turbo ELD foregrounds either. Turbo ELD's own copy claims "auto-certify logbooks," which sits uneasily with 395.30(b)(1)–(2) and 395.8(f)(2). We do not make that claim, and we can quietly be the compliant alternative.
 - **Do not sell training or generic guidance as a revenue line.** FMCSA provides the Motor Carrier Safety Planner, free ELD carrier-and-driver training, and official guidance free. That free layer is real and it caps what knowledge alone can be charged for. Our value is the staffed execution and the evidence file.
 
-**The strongest asset the research found, and it is not a price argument.** *United States v. Sisic* (D.R.I. 2020): the owner of an **11-tractor** carrier altered thousands of ELD entries for ~20 drivers to conceal driving and on-duty time; one driver died in an April 22, 2018 Oklahoma crash; he pleaded guilty to conspiracy to falsify records (18 U.S.C. § 371) and on **January 25, 2021 was sentenced to three years' probation including six months' home incarceration with electronic monitoring, 50 hours' community service, a $1,000 fine and a $100 special assessment**; FMCSA **suspended and proposed a three-year debarment on April 29, 2021, and debarred him on August 19, 2021**. The company is defunct. *(Earlier drafts of this line said "18 months and $50,000" — that was the prosecution's sentencing recommendation, not the judgment. Corrected 2026-10-20; sources in `research/RESEARCH-LOG.md` §1.4.)* That is our target customer — small fleet, owner-operated, an ELD and no compliance function — doing precisely what an unmanaged fleet does. And the mechanism is the part worth selling against: **what ended that company was not a messy log, it was the false second copy of the log he handed to the state trooper investigating the fatal crash and to the FMCSA compliance reviewer.** Full enforcement history, including a 126-count Virginia indictment that added **wire fraud** (the reason our documented-correction standard is not optional), is in `research/RESEARCH-LOG.md` §1.4.
+**The strongest asset the research found, and it is not a price argument.** *United States v. Sisic* (D.R.I. 2020): the owner of an **11-tractor** carrier altered thousands of ELD entries for ~20 drivers to conceal driving and on-duty time; one driver died in an April 22, 2018 Oklahoma crash; he pleaded guilty to conspiracy to falsify records (18 U.S.C. § 371) and on **January 25, 2021 was sentenced to three years' probation including six months' home incarceration with electronic monitoring, 50 hours' community service, a $1,000 fine and a $100 special assessment**; FMCSA **suspended and proposed a three-year debarment on April 29, 2021, and debarred him on August 19, 2021**. The company is defunct. *(Earlier drafts of this line said "18 months and $50,000" — that was the prosecution's sentencing recommendation, not the judgment. Corrected 2026-10-19; sources in `research/RESEARCH-LOG.md` §1.4.)* That is our target customer — small fleet, owner-operated, an ELD and no compliance function — doing precisely what an unmanaged fleet does. And the mechanism is the part worth selling against: **what ended that company was not a messy log, it was the false second copy of the log he handed to the state trooper investigating the fatal crash and to the FMCSA compliance reviewer.** Full enforcement history, including a 126-count Virginia indictment that added **wire fraud** (the reason our documented-correction standard is not optional), is in `research/RESEARCH-LOG.md` §1.4.
 
 ---
 
 ## 4. Segments — ranked by profitability per unit of selling effort
 
-> **Reordered 2026-10-20 by the strategy panel.** The beachhead is no longer "fleets with a violation" — it is **carriers with a dated event inside 90 days**, because that is the only buyer we can sell to without a track record. And the first segment is now one nobody in this business had looked at: the New Entrant safety audit.
+> **Reordered 2026-10-19 by the strategy panel.** The beachhead is no longer "fleets with a violation" — it is **carriers with a dated event inside 90 days**, because that is the only buyer we can sell to without a track record. And the first segment is now one nobody in this business had looked at: the New Entrant safety audit.
 
 ### Tier 0 — Beachhead: the New Entrant safety audit **[NEW, recommended first]**
 - **Who:** a carrier within its first 12 months of operating that has been selected for a New Entrant Safety Audit and is preparing the file FMCSA will review.
@@ -220,7 +220,7 @@ The strategy panel was unanimous on removing 24/7 from positioning, and split on
 
 **Read these two right-hand columns carefully — the panel's verdict is that the two-shift column is the one we should be planning against.** Three shifts is a business that needs 60–85 trucks before it pays for itself. Two shifts is a business that needs ~40. **And note the strategic cost of three shifts: at 25 trucks, the 24/7 promise turns a viable account into a $1,000-a-year loss.**
 
-### 5.2 The price ladder — one ladder, in one place **[corrected 2026-10-20]**
+### 5.2 The price ladder — one ladder, in one place **[corrected 2026-10-19]**
 
 The panel found that `PLAN.md` and `SALES-PLAYBOOK.md` carried **different tiers** (a 15-truck fleet was $1,950/mo in one and $2,250 in the other) and that the ladder was **built to lose money in exactly the two bands where we cannot win on price**. Reconciled, and the reconciliation is now binding:
 
@@ -294,7 +294,7 @@ Our service addresses 1, 2, 4. It creates 3 — being monitored is unpleasant. *
 
 ## 9. 90-day plan
 
-> **Resequenced 2026-10-20 by the strategy panel.** The panel's sharpest criticism of this plan was its sequencing: we were scheduled to sell before we were allowed to, the price was marked "confirmed" without a single buyer conversation, and the proof strategy was arithmetically incapable of producing evidence in 90 days. **The interviews and the outbound now start in week one. The entity, E&O and attorney gate *signing*, not *talking*.**
+> **Resequenced 2026-10-19 by the strategy panel.** The panel's sharpest criticism of this plan was its sequencing: we were scheduled to sell before we were allowed to, the price was marked "confirmed" without a single buyer conversation, and the proof strategy was arithmetically incapable of producing evidence in 90 days. **The interviews and the outbound now start in week one. The entity, E&O and attorney gate *signing*, not *talking*.**
 
 ### Days 1–5 — Buy the diagnosis (do this before anything else)
 - [ ] **Ten owner interviews and two dispatcher interviews, in week one.** The two load-bearing unknowns are willingness to pay at $130 and requests per truck per week, and both gate the price decision. Guides: `research/interview-guides.md`. **The panel's rule: the price is a hypothesis until these are read, and the segment is decided by the conversion rate of the dated-event cohort versus the unexamined cohort — not by argument.**
@@ -375,7 +375,7 @@ Our service addresses 1, 2, 4. It creates 3 — being monitored is unpleasant. *
 
 ## 11. The strategy, in one page
 
-*Written by the strategy panel, 2026-10-20. Full reasoning in `research/strategy-memo.md`.*
+*Written by the strategy panel, 2026-10-19. Full reasoning in `research/strategy-memo.md`.*
 
 **Diagnosis.** We are selling a product in the wrong category. The deliverable the buyer actually needs is a **source-documented, driver-certified file** that proves his operation was lawful when someone with authority comes - and no competitor claims it, because for everyone else it is a compliance control rather than a product. Meanwhile the promise we have been leading with, 24/7, is roughly half our fixed cost, is table stakes at $60, and under 395.30(d)(2) most of the work cannot be actioned until business hours anyway.
 

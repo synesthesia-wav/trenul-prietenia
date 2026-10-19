@@ -82,7 +82,7 @@ Federal prosecutions of falsified hours-of-service records, DOT Office of Inspec
 
 | Case | Year | Facts | Outcome |
 |---|---|---|---|
-| **US v. Sisic**, D.R.I., Crim. No. 20-63MSM (18 USC 371 conspiracy to falsify records) | 2020–21 | Owner of an 11-tractor Rhode Island carrier altered thousands of ELD entries for ~20 drivers to conceal driving and on-duty time, using the carrier's own Omnitracs system. One driver died in an April 22, 2018 Oklahoma crash. | **CORRECTED 2026-10-20 — see the correction note immediately below.** Pleaded guilty Oct 14, 2020. **Sentenced Jan 25, 2021 to 3 years' probation including 6 months' home incarceration with electronic monitoring, 50 hours' community service, a $1,000 fine and a $100 special assessment.** FMCSA suspended and proposed debarment for 3 years on Apr 29, 2021, and debarred him on Aug 19, 2021. Company defunct. |
+| **US v. Sisic**, D.R.I., Crim. No. 20-63MSM (18 USC 371 conspiracy to falsify records) | 2020–21 | Owner of an 11-tractor Rhode Island carrier altered thousands of ELD entries for ~20 drivers to conceal driving and on-duty time, using the carrier's own Omnitracs system. One driver died in an April 22, 2018 Oklahoma crash. | **CORRECTED 2026-10-19 — see the correction note immediately below.** Pleaded guilty Oct 14, 2020. **Sentenced Jan 25, 2021 to 3 years' probation including 6 months' home incarceration with electronic monitoring, 50 hours' community service, a $1,000 fine and a $100 special assessment.** FMCSA suspended and proposed debarment for 3 years on Apr 29, 2021, and debarred him on Aug 19, 2021. Company defunct. |
 | **US v. Belovs**, E.D. Pa. | 2012 | 15 false-statement counts. Falsified FMCSA logbooks to conceal driving beyond lawful hours; fatal crash, one killed, five injured. | 18 months; 36 months supervised release; $2,500 fines. |
 | **US v. McClafferty**, E.D. Pa. | 2003 | Pleaded guilty to 10 counts of falsifying HOS logs; 6 other drivers, the dispatcher and the company were indicted. | Guilty plea. |
 | Nijjar Brothers Trucking (Madera, CA) | 2006 | 13 drivers pleaded guilty to false logbooks. | 4 sentenced: 15 months, 3 months, 3 months, 135 days. |
@@ -97,11 +97,11 @@ Federal prosecutions of falsified hours-of-service records, DOT Office of Inspec
 
 **Honest limitation:** none of these cases involves a *vendor* being prosecuted for selling falsification. That is consistent with the low visibility of this market, not evidence of legal safety. The vendor exposure is real but untested; our Rule 2 refusal log is the defence.
 
-> ### ⚠️ CORRECTION (2026-10-20) — the Sisic sentence, and a lesson about the disconfirming pass
+> ### ⚠️ CORRECTION (2026-10-19) — the Sisic sentence, and a lesson about the disconfirming pass
 >
 > Earlier versions of this log, of `PLAN.md`, of `RISKS.md`, of `SALES-PLAYBOOK.md`, of `README.md` and of `research/memo-gate0.md` stated that Sisic received **"18 months and $50,000."** **That was wrong.** The 18-month/$50,000 figure is what the *United States recommended* in its sentencing memorandum (the guideline range was 18–24 months). The **judgment actually imposed on January 25, 2021** was: **3 years' probation, including 6 months' home incarceration with electronic monitoring, 50 hours of community service, a $1,000 fine and a $100 special assessment.** Separately, FMCSA **suspended and proposed a 3-year debarment on April 29, 2021, and debarred him on August 19, 2021.**
 >
-> Verified from four independent Grade A/B sources, all pulled 2026-10-20: DOT OIG items 38239 (sentencing), 38408 (suspension/debarment) and 37995 (charge); the US Attorney's Office for the District of Rhode Island press release of Jan 25, 2021; and the Judgment in a Criminal Case (D.R.I. 1:20-CR-00063-MSM-PAS, filed 01/27/21). The court's own docket is the controlling source.
+> Verified from four independent Grade A/B sources, all pulled 2026-10-19: DOT OIG items 38239 (sentencing), 38408 (suspension/debarment) and 37995 (charge); the US Attorney's Office for the District of Rhode Island press release of Jan 25, 2021; and the Judgment in a Criminal Case (D.R.I. 1:20-CR-00063-MSM-PAS, filed 01/27/21). The court's own docket is the controlling source.
 >
 > **Why this matters beyond the embarrassment.** Three of the eight strategy advisors independently flagged that the sentence is a *checkable* fact a prospect can disprove in one search, and that a seller who is caught overstating a court record has no credibility left to sell a compliance file with. The error was mine, made in the very documents whose entire premise is evidentiary discipline — which is precisely the discipline we are asking customers to buy.
 >
@@ -285,9 +285,9 @@ US small-business E&O baseline (2025–26, grade C, insurer/broker aggregators):
 
 ---
 
-## Section 5 — Strategy panel research additions (2026-10-20)
+## Section 5 — Strategy panel research additions (2026-10-19)
 
-All pulled 2026-10-20 unless stated. Grades as above.
+All pulled 2026-10-19 unless stated. Grades as above.
 
 ### 5.1 ⚠️ The Sisic sentence — corrected
 
@@ -338,11 +338,11 @@ Earlier entries in this log and in six project documents stated the sentence as 
 
 ### 5.4 Two competitors not previously known
 
-**DotFleet Compliance** (https://www.dotfleetcompliance.com/ and /pricing/, pulled 2026-10-20, Grade C — vendor's own pages): a **fully remote** single-regulation specialist for **fleets of 1–50 trucks**, **$75 per driver one-time** (file built or remediated) + **$30 per driver per month** ongoing, month-to-month, cancel with 30 days, **"response within 1 business day"**, **Mon–Fri 8am–6pm CT**. It explicitly refuses the rest: "We deliberately do one thing well. We don't administer drug and alcohol testing (Part 382), **hours of service**, vehicle maintenance files, or permits — and we'll tell you plainly what you still need to cover elsewhere."
+**DotFleet Compliance** (https://www.dotfleetcompliance.com/ and /pricing/, pulled 2026-10-19, Grade C — vendor's own pages): a **fully remote** single-regulation specialist for **fleets of 1–50 trucks**, **$75 per driver one-time** (file built or remediated) + **$30 per driver per month** ongoing, month-to-month, cancel with 30 days, **"response within 1 business day"**, **Mon–Fri 8am–6pm CT**. It explicitly refuses the rest: "We deliberately do one thing well. We don't administer drug and alcohol testing (Part 382), **hours of service**, vehicle maintenance files, or permits — and we'll tell you plainly what you still need to cover elsewhere."
 
 **Why it matters three ways:** (1) it **proves the business model** — a remote, narrow, published-price, per-driver specialist desk is a proven, sellable shape; (2) it **hands us the wedge** — its own FAQ points its buyers at Part 395 and ELDs; (3) it **is the specialist price reference** we cannot beat on price ($30/driver/month against our $130/truck/month), which is why the differentiator must be the file and the deadline, not the hourly rate.
 
-**AI ELD** (https://ai-eld.com/pricing, pulled 2026-10-20, Grade C): **Basic $20/vehicle/month**; **Monitoring $50/vehicle/month** — "a team that actively watches your account for disconnected events, violations and other alerts and works to help resolve them within minutes so your staff spends less time firefighting"; month-to-month, no minimum truck count, billed per active user or vehicle. **This is the real low-end disruption vector: 2.6x cheaper than us, with a human team, and the ELD itself included.** Their own article adds: FMCSA's 2016 regulatory impact analysis estimated the average ELD cost at $41.25/truck/month; AI ELD Basic $20; mid-range single-truck plans $25–35.
+**AI ELD** (https://ai-eld.com/pricing, pulled 2026-10-19, Grade C): **Basic $20/vehicle/month**; **Monitoring $50/vehicle/month** — "a team that actively watches your account for disconnected events, violations and other alerts and works to help resolve them within minutes so your staff spends less time firefighting"; month-to-month, no minimum truck count, billed per active user or vehicle. **This is the real low-end disruption vector: 2.6x cheaper than us, with a human team, and the ELD itself included.** Their own article adds: FMCSA's 2016 regulatory impact analysis estimated the average ELD cost at $41.25/truck/month; AI ELD Basic $20; mid-range single-truck plans $25–35.
 
 **Samsara "Smart Compliance"** (https://www.samsara.com/uk/company/news/press-releases/samsara-launches-smart-compliance, published **2026-04-21**, Grade B — company press release): industry-first dynamic compliance for the **EU and UK only**; "we review yesterday's, deal with them immediately, and send them straight to the driver digitally… it takes about two minutes per infringement"; proactive pre-infringement audio alerts; "the first platform" to consolidate infringement analysis, alerts and resolution. **US availability unconfirmed and is the single biggest threat on the horizon.**
 
@@ -352,7 +352,7 @@ Earlier entries in this log and in six project documents stated the sentence as 
 
 **91 FR 12448**, final rule published 2026-06-22, **effective 2026-07-22**, Docket FMCSA-2025-0114, RIN 2126-AC88: FMCSA **rescinded** the requirement to keep a copy of the ELD operator's manual in the vehicle. "Section 395.22 is amended by removing paragraph (h)(1) and redesignating paragraphs (h)(2) through (h)(4) as paragraphs (h)(1) through (h)(3)."
 
-**Current 49 CFR 395.22(h) in full, verified 2026-10-20 at Cornell LII:** a motor carrier must ensure its drivers possess onboard an ELD information packet containing (1) an instruction sheet describing data transfer and how to produce and transfer HOS records to an authorised safety official; (2) an instruction sheet describing **ELD malfunction reporting requirements and recordkeeping procedures during malfunctions**; and (3) a supply of blank RODS graph-grids sufficient for a minimum of **8 days**.
+**Current 49 CFR 395.22(h) in full, verified 2026-10-19 at Cornell LII:** a motor carrier must ensure its drivers possess onboard an ELD information packet containing (1) an instruction sheet describing data transfer and how to produce and transfer HOS records to an authorised safety official; (2) an instruction sheet describing **ELD malfunction reporting requirements and recordkeeping procedures during malfunctions**; and (3) a supply of blank RODS graph-grids sufficient for a minimum of **8 days**.
 
 **And 49 CFR 395.34(a):** in case of an ELD malfunction the driver must (1) note the malfunction and give the carrier **written notice within 24 hours**; (2) **reconstruct the record of duty status for the current 24-hour period and the previous 7 consecutive days on graph-grid paper**; and (3) continue manual RODS until the ELD is serviced.
 

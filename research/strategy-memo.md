@@ -1,12 +1,12 @@
 # Strategy Panel — Synthesis of Eight Advisor Lenses
 
-**Date:** 2026-10-20
+**Date:** 2026-10-19
 **Panel:** eight advisors, each applying one published framework to the same evidence base, run in parallel as isolated sessions
 **Question put to each:** how might we market, sell, and build a business strategy for this venture?
 
 **Framing note.** These are not eight people. Each is a *framework* applied to our verified evidence, and the arguments are the advisor's, not the named thinker's. Where an advisor's factual claims diverge from our own research log, I resolved it against primary sources and say so below.
 
-**Sources for every factual claim:** `research/RESEARCH-LOG.md` (evidence grades, pull dates) and `research/raw/2026-10-19/manifest.md`. Additions made 2026-10-20 are marked **[NEW]**.
+**Sources for every factual claim:** `research/RESEARCH-LOG.md` (evidence grades, pull dates) and `research/raw/2026-10-19/manifest.md`. Additions made 2026-10-19 are marked **[NEW]**.
 
 ---
 
@@ -129,7 +129,7 @@ And his disagreement with his own framework, which is the most mature point in t
 
 ---
 
-## 4. The new strategic openings (verified 2026-10-20)
+## 4. The new strategic openings (verified 2026-10-19)
 
 Four findings this session that no advisor had, and that change the opportunity set.
 
@@ -137,7 +137,7 @@ Four findings this session that no advisor had, and that change the opportunity 
 
 **This is the strongest new opening and it was not in any plan.**
 
-FMCSA Grade A sources (pulled 2026-10-20):
+FMCSA Grade A sources (pulled 2026-10-19):
 
 | Fact | Value | Source |
 |---|---|---|
@@ -265,6 +265,6 @@ So the current in-vehicle packet is: (h)(1) data-transfer instruction sheet, (h)
 
 - `research/strategy-panel.md` — the eight advisor briefs, unabridged, with the evidence each cited
 - `research/strategy-memo.md` — this synthesis, as the decision record
-- `research/RESEARCH-LOG.md` — updated with the 2026-10-20 findings and the Sisic correction
+- `research/RESEARCH-LOG.md` — updated with the 2026-10-19 findings and the Sisic correction
 - `PLAN.md`, `SALES-PLAYBOOK.md`, `RISKS.md`, `README.md` — updated
 - `assets/` — the Health Check and the reconciliation procedure, updated
