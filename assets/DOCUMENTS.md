@@ -119,7 +119,17 @@ Two worked examples live in `research/sessions-example/` — files beginning wit
 
 ---
 
-## 5. What we are not sending
+## 5. The agent outreach script
+
+**`assets/AGENT-SCRIPT.md`** is the spoken script for the ten day-one calls: five truck insurance agents, five ELD resellers. It includes the 15-second opener, the 90-second version, the objection table, and the exact forward to send afterwards.
+
+The move that makes the call work: **do not ask the agent to find a carrier — name one yourself.** They have [N] carriers in your state inside the twelve-month audit window, and you can already see which ones have a gap in their own public record. That removes the one objection every agent has to a referral request.
+
+**Never quote a per-truck price on a cold call.** It turns a conversation about the agent's problem into a conversation about our number. If asked, offer the free review instead.
+
+---
+
+## 6. What we are not sending
 
 - **No monthly activity report.** Twelve pages of activity is a document nobody forwards. The monthly artifact is one page: three things you did not know, and here is the file.
 - **No outcome claims.** "We reduce violations" is unsupportable: no published effect size exists for outsourced ELD or compliance services, and the research log's own disconfirming pass found the null result. We sell the file and the process.
