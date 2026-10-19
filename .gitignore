@@ -4,3 +4,7 @@
 
 # OS
 .DS_Store
+
+# Generated research data (rebuild with research/build_new_entrant_list.py)
+research/data/*.csv
+research/data/census-columns.json

@@ -8,11 +8,14 @@ Managed hours-of-service compliance for US trucking fleets. $130/truck/month, de
 
 | File | What it is | Read it when |
 |---|---|---|
+| [`research/WEEK-ONE.md`](research/WEEK-ONE.md) | **The operating plan for the first seven days**: the target list, the calling sequence, the script, the measurement plan, and the three decisions it feeds | Now — this is what to do next |
 | [`PLAN.md`](PLAN.md) | Strategy: the kernel, segments, product design, unit economics, channel mix, 90-day plan, metrics | First — it is the business |
-| [`research/strategy-memo.md`](research/strategy-memo.md) | The synthesis of eight advisor lenses: what they agreed on, where they split, what changed, what was rejected | Now — this is the decision record |
+| [`research/strategy-memo.md`](research/strategy-memo.md) | The synthesis of eight advisor lenses: what they agreed on, where they split, what changed, what was rejected | For the decision record |
 | [`research/strategy-panel.md`](research/strategy-panel.md) | The eight briefs unabridged, each with the evidence it cited | When you want to argue with the recommendation |
 | [`SALES-PLAYBOOK.md`](SALES-PLAYBOOK.md) | The pitch by audience, the call structure, qualification, the price ladder, objection handling, retention | Before every owner conversation |
 | [`RISKS.md`](RISKS.md) | 19 risks ranked by expected cost, each with why it bites, mitigation, and an owner | Before each new channel, contract, or hire |
+| [`research/build_new_entrant_list.py`](research/build_new_entrant_list.py) | Rebuilds the target list from the public FMCSA census file. No API key, no cost. | Before each state campaign — the list refreshes daily |
+| [`research/data/`](research/data/) | The built lists: `new-entrant-targets.csv` (44,959), `sprint-tx-fl.csv` (578), `first-100.csv`, `state-campaign.csv` | Before you dial |
 | [`research/RESEARCH-LOG.md`](research/RESEARCH-LOG.md) | Every researched claim with source grade, pull date, and what it changed — including what could not be verified | Before relying on any number or citation |
 | [`research/memo-gate0.md`](research/memo-gate0.md) | The market-research go/no-go: which gates passed, which failed | For the original evidence trail |
 | [`research/interview-guides.md`](research/interview-guides.md) | Four interview scripts (fleet owner, insurance agent, ELD reseller, dispatcher) | Before the first interview |
@@ -36,4 +39,4 @@ Managed hours-of-service compliance for US trucking fleets. $130/truck/month, de
 - **The strongest sales asset is a criminal case** — *United States v. Sisic* (D.R.I.): an 11-truck carrier's owner altered thousands of ELD entries; one driver died in Oklahoma; three years' probation including six months' home incarceration, a $1,000 fine, and a three-year FMCSA debarment; the company is defunct. What ended it was not the messy log but the false second copy he handed to the trooper.
 - **No number in a customer-facing document without a source URL and a pull date.** We got the Sisic sentence wrong once, and that rule exists because of it.
 
-**Status:** Gate 0 research and the strategy panel are complete. Blocked on three things only a human can close: the **E&O broker call** (can a Moldova-domiciled provider write E&O with US claims handling?), the **Moldovan accountant** (does the IT Park 7% turnover regime apply?), and **ten owner interviews** (will they pay above $100/truck/month for a document-backed file?). The kill criterion is written down in `PLAN.md` §11 so it cannot be moved later.
+**Status:** the strategy panel and Gate 0 research are complete, and the first-week operating plan is in `research/WEEK-ONE.md` — the target list is already built (44,959 new entrants, from the public FMCSA census file) and the day-by-day calling sequence is written. The E&O placement and the Moldovan IT Park tax question are **assumed yes for planning** and remain open for execution; until the policy is bound we can talk and run a paid pilot, but not sign an annual managed-services contract — which is why the first thing we sell is an event, not a retainer. The kill criterion is written down in `PLAN.md` §11 so it cannot be moved later.
