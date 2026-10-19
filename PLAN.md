@@ -321,7 +321,8 @@ Our service addresses 1, 2, 4. It creates 3 — being monitored is unpleasant. *
 
 ### Days 15–45 — Proof
 - [ ] **The first New Entrant audit-prep engagement sold and delivered** (Tier 0). This is the proof of the product, not of the funnel.
-- [ ] **Run the first 20 glovebox sessions.** Each one ends with the cab review generated and sent within 48 hours (`assets/merge_cab_review.py`). The written review is the artefact that gets forwarded, and forwarding is the only referral engine we have.
+- [ ] **Run the first 20 glovebox sessions** (`assets/GLOVEBOX-GUIDE.md`). Each one ends with the cab review generated and sent within 48 hours (`assets/merge_cab_review.py`). The written review is the artefact that gets forwarded, and forwarding is the only referral engine we have.
+- [ ] **Capture every session in the session sheet** (`assets/session-sheet.html`) and run `python3 research/aggregate_sessions.py` weekly. It produces the defect-rate table, the price evidence and the three gate decisions — against thresholds fixed in advance, so they cannot be moved afterwards.
 - [ ] 3–5 friendly fleets from the partners' network, on paid pilots (business-hours SLA, flat fee).
 - [ ] Baseline their FMCSA records, response times, correction turnaround, and driver feedback **before** we touch anything.
 - [ ] **Measure what we can count ourselves, not what we cannot:** weight-5 paperwork defects found and closed per truck per month, by regulation. **Do not build a citation-count measurement programme** — a small fleet gets 1–3 roadside inspections a year and FMCSA will not assign a percentile without three driver inspections with violations, so the outcome metric cannot move in 90 days. The pre-engagement baseline is still captured, as a *byproduct of the first call*, but it is not a workstream.

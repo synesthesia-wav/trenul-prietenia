@@ -96,7 +96,30 @@ This is not a formality. We published the wrong sentence once — the Sisic sent
 
 ---
 
-## 4. What we are not sending
+## 4. The session sheet and the aggregator
+
+**`session-sheet.html`** is the capture form. Open it in a browser, type the USDOT number, and the carrier's own record is pulled live from the public FMCSA census file — name, city, power units, drivers, authority date. Tick the cab items and the file items, answer the six questions, press **Download JSON**, and save it to `research/sessions/session-<DOT>.json`.
+
+Tri-state per item: **✓** in place · **✗** missing · **–** not checked. Anything not recorded stays "not checked" and is never silently counted as present.
+
+**`research/aggregate_sessions.py`** reads every session and prints:
+
+1. the **defect table by regulation** — the number nobody has, and the one that decides the thesis;
+2. the **funnel** — sessions → pilots → closed;
+3. the **price evidence** — what they pay today, and their own stated ceiling;
+4. the **gate decisions**, against thresholds fixed in advance.
+
+```bash
+python3 research/aggregate_sessions.py
+```
+
+It also **verifies that the form and the template still agree** on every item key, and refuses to run if they have drifted apart. (It has already caught one such drift during build.)
+
+Two worked examples live in `research/sessions-example/` — files beginning with `_` are skipped by the aggregator, so they never contaminate the real numbers.
+
+---
+
+## 5. What we are not sending
 
 - **No monthly activity report.** Twelve pages of activity is a document nobody forwards. The monthly artifact is one page: three things you did not know, and here is the file.
 - **No outcome claims.** "We reduce violations" is unsupportable: no published effect size exists for outsourced ELD or compliance services, and the research log's own disconfirming pass found the null result. We sell the file and the process.
