@@ -25,7 +25,7 @@ Ranked by expected cost. Each entry: the risk, why it bites, the mitigation, and
 **What the research changed (2026-10-19) — three material updates, all verified against the current CFR:**
 
 1. **The rule I had been citing is wrong, and the correct rule is better for us.** `395.8(e)(4)(ii)` does not exist in the current CFR — it was withdrawn by the November 2023 technical-corrections rule (89 FR 712, eff. 2024-01-05). The operative provisions are **395.30(d)**, which expressly permits the motor carrier to request edits with the driver confirming, rejecting, entering and recertifying, and 395.30(d)(3), which requires exactly that for "any system or any person other than the driver." **Our product is the regulation's own model.** This turns the risk section from a defence into a selling point: we are not hiding from the rule, we are the rule's workflow, and an attorney packet can say so in one paragraph.
-2. **The criminal exposure lands on the carrier owner, not on us** — provided we do not alter the record. *United States v. Sisic* (D.R.I. 2020): the owner of an **11-truck** carrier altered thousands of ELD entries for ~20 drivers to conceal driving and on-duty time; one driver died; guilty plea to conspiracy to falsify records (18 U.S.C. § 371), 18 months, $50,000, company defunct. Also *Belovs* (E.D. Pa. 2012, 15 counts, fatal crash, 18 months), *McClafferty* (E.D. Pa. 2003, 10 counts; six drivers plus the dispatcher and the company indicted), Nijjar Brothers (Cal., 13 drivers), and a 126-count Virginia indictment that added **wire fraud** (which is why our documented-correction standard is not optional). **Sisic is our target customer** — small fleet, owner-operated, an ELD and no compliance function. That is the strongest available evidence that the problem is real and that the current "solution" is to lie.
+2. **The criminal exposure lands on the carrier owner, not on us** — provided we do not alter the record. *United States v. Sisic* (D.R.I., Crim. No. 20-63MSM): the owner of an **11-truck** carrier altered thousands of ELD entries for ~20 drivers to conceal driving and on-duty time; one driver died in an April 22, 2018 Oklahoma crash; guilty plea to conspiracy to falsify records (18 U.S.C. § 371) on Oct 14, 2020; **sentenced Jan 25, 2021 to three years' probation including six months' home incarceration with electronic monitoring, 50 hours' community service, a $1,000 fine and a $100 special assessment**; **FMCSA suspended and proposed a three-year debarment on Apr 29, 2021 and debarred him on Aug 19, 2021**; company defunct. *(Corrected 2026-10-20 — earlier drafts said "18 months, $50,000", which was the prosecution's sentencing recommendation, not the judgment. See `research/RESEARCH-LOG.md` §1.4.)* Also: *Belovs* (E.D. Pa. 2012, 15 counts, fatal crash, 18 months), *McClafferty* (E.D. Pa. 2003, 10 counts; six drivers plus the dispatcher and the company indicted), Nijjar Brothers (Cal., 13 drivers), and a 126-count Virginia indictment that added **wire fraud** (which is why our documented-correction standard is not optional). **Sisic is our target customer** — small fleet, owner-operated, an ELD and no compliance function. That is the strongest available evidence that the problem is real and that the current "solution" is to lie.
 3. **The device blocks part of the evasion.** Appendix A § 4.3.2.8.2(b) bars shortening automatically recorded driving time, and FMCSA's Q7 confirms driving time "cannot be edited or changed to non-driving time." The classic hours-shortening evasion is not merely illegal, it is technically blocked. Class 4 is therefore aligned with the regulation rather than stricter than it, and we can say so.
 
 **Open verification items — do not cite until confirmed.** The current paragraph for the 14-day ELD records-availability requirement, and the text of 395.3(e)(4). Both appeared in earlier drafts; neither could be located in the current CFR text during the 2026-10-19 research. See `research/RESEARCH-LOG.md` §1.3.
@@ -235,3 +235,92 @@ Ranked by expected cost. Each entry: the risk, why it bites, the mitigation, and
 - The cheapest structural protection is automation of the *monitoring* sweep (exception detection off the ELD feed) while keeping humans on the document reconciliation. That is not "building software" in the sense the partners object to; it is a rules engine over an existing feed, and it is the only way the 24/7 promise survives at 200 trucks.
 
 **Owner.** Delivery lead (measurement) + owner (staffing gates).
+
+---
+
+## 15. The refusal log is discoverable as an admission (new, 2026-10-20)
+
+**Risk.** The refusal log is, on the strategy panel's agreement, the single strongest asset we have: it is the only thing a competitor cannot ship, and it is the artefact that makes us credible without a track record. It is also a **written record that the carrier asked us to make a correction the paperwork did not support.** Read by a carrier's own attorney, or produced in a civil discovery, it could look like a written confession that the fleet was seeking falsification — and it would be the single most damaging document in the file.
+
+**Why it bites.** We are simultaneously (a) planning to publish it as marketing and (b) building the business on the premise that the file is what an inspector, an insurer or a plaintiff's lawyer will read. Those two uses collide. A document that is safe to publish is not necessarily safe to produce, and vice versa. Nobody in the project has asked an attorney this question.
+
+**Mitigation.**
+- **Get the answer before we publish anything.** US counsel must advise: is a logged refusal exculpatory, or an admission? Until then, the log is internal only, and the *published* form of the SOP describes the refusal **rule** without shipping the log itself.
+- **Scope the wording to process, not intent.** "We did not propose a change because the documents did not support one" is a statement about our method. "The carrier asked us to conceal hours" is a statement about the carrier's intent, and is a gift to the other side. The schema must make the first form the only easy one to write.
+- **Never write down a requester's intent, a motive, or a name beyond the minimum needed.** The log records: the request, the documents reviewed, the classification, the reason for the classification, who was notified, and the date. It does not record what we think the requester wanted.
+- **Retention and access controls**: the log is part of the file, produced only in response to a lawful request or an insurance/attorney request, and shared with the carrier by default so there is no hidden second copy.
+- **Sequence**: publish the SOP page first (a method, which is safe), and the log format later, once counsel has cleared it. The moat is the *behaviour*, and the behaviour is what takes 90 days to build; the publication can wait.
+
+**Owner.** Partner #1 (schema) + US attorney (opinion) + owner (publication decision).
+
+---
+
+## 16. The category is commoditising from both ends (new, 2026-10-20)
+
+**Risk.** Two platforms are building the layer we are selling, and one of them has already shipped the workflow.
+
+- **Samsara launched "Smart Compliance" on 2026-04-21** — "we review yesterday's, deal with them immediately, and send them straight to the driver digitally... it takes about two minutes per infringement." That is our desk, automated, with proactive pre-infringement audio alerts. **EU and UK only as of launch; US availability unconfirmed.** It is the single biggest threat to the standing SKU, and the clock on the whole strategy.
+- **Motive shipped AI driver-qualification document management in February 2026**, citing FMCSA audit data on missing and outdated documents in driver files. Motive also offers "Qualification Documents Expert Services."
+- **DotFleet Compliance** already occupies the adjacent specialist niche with published per-driver pricing ($75 one-time, $30/driver/month), fully remote, all 50 states — and explicitly refuses HOS and ELDs, pointing its own buyers at us.
+- **AI ELD** sells a $50/vehicle/month tier with a human team that resolves events "within minutes," month-to-month, no minimum.
+
+**Why it bites.** Our differentiator was always going to be the document. If the platforms make the document, the file becomes a feature, and a feature is a $25-65 line item on someone else's invoice. The window is measured in quarters, not years.
+
+**Mitigation.**
+- **Watch Samsara's US launch as the primary external deadline.** No public statement found; check Samsara's US product pages and investor materials quarterly and set a hard internal date at which we re-evaluate the standing SKU.
+- **Do not compete on the ELD platform's own ground.** We are ELD-neutral; that is an asset, and it is also the thing a platform cannot copy without cannibalising their own ELD revenue.
+- **Lead with the New Entrant audit-prep event** (Tier 0). It is a document-assembly job with an external deadline, it is not what a platform's real-time dashboard does, and it is a one-off rather than a subscription a platform can bundle.
+- **Build the two assets a platform cannot copy quickly**: per-fleet exception-pattern knowledge, and the broker's renewal data. Both are outside the ELD data stream.
+- **Assume the standing SKU has a 24-month shelf** and make the event SKU and the broker relationship the durable parts of the business.
+
+**Owner.** Partner #2 (competitive watch) + owner (platform strategy).
+
+---
+
+## 17. The "New Entrant" beachhead may be a small, poor, and shrinking pool (new, 2026-10-20)
+
+**Risk.** Tier 0 is the strongest-looking segment we found, and it is the newest, least validated idea in the plan. Three ways it could disappoint:
+- **56% of New Entrant exits are "inactive, change, no show at the safety audit, no contact."** The population contains a large share of carriers who will not pay for anything.
+- **The failures are small carriers.** A 1-3 truck carrier that fails its safety audit has a catastrophic downside and almost no budget. The two facts are in tension: the deadline is strongest where the budget is weakest.
+- **FMCSA's own data says the failure rate is 7.4-11.8%, not the "one in three" that vendor blogs claim.** At 8.7% of 58,600 audits, the addressable pool is ~5,100 carriers a year, of which only a fraction will both pay and be reachable.
+- And a risk nobody has checked: **the audit can be conducted electronically, which is what makes the offshore model viable — but it also means the work is document assembly, which is exactly what a $29 software bundle or a $30/driver specialist could do.**
+
+**Why it bites.** We are making this the first thing we sell, on the basis of one research session, before a single customer conversation. If the pool is thin or the willingness to pay is near zero, we burn the first 90 days on a segment that cannot carry the business.
+
+**Mitigation.**
+- **Treat the 90-day target as a test, not a plan: 2 New Entrant engagements sold.** If we cannot sell two in 45 days, the segment is wrong and we fall back to Tier 1 (dated-event fleets) without further argument.
+- **Price the event, not the fleet** ($1,500-4,000), because a 2-truck carrier cannot pay a per-truck retainer but a business facing revocation of its registration can pay for a professional to assemble the file.
+- **The audit is a one-off; the retainer has to come from somewhere else.** Assume a New Entrant engagement is a customer-acquisition event whose real value is proving the file works, not a revenue engine. Do not build the plan on its recurring revenue.
+- **Verify the pool from FMCSA's own data** (the census file and the New Entrant statistics) before scaling: how many carriers fail, in which states, and how many of those are in states where enforcement is active.
+- **Do not repeat the "one in three fail" claim** — it is a grade-C vendor figure contradicted by FMCSA's 8.7%.
+
+**Owner.** Partner #1 (delivery) + owner (segment test) + requester (interviews).
+
+---
+
+## 18. The specialist competitor is closer than we modelled (new, 2026-10-20)
+
+**Risk.** DotFleet Compliance is not a distant competitor in a different segment. It is a **remote, single-regulation, published-price, per-driver, 100%-remote compliance desk for fleets of 1-50 trucks** — our exact operational shape — with a free file review as its magnet, Mon-Fri 8am-6pm CT coverage, and a one-business-day response promise. It also refuses HOS explicitly, which is our opening, but it demonstrates that the shape works and that a well-positioned specialist in this market publishes two prices and nothing else.
+
+**Why it bites.** We had classified the $25-65 tier as software and the $60 tier as offshore monitoring. DotFleet is neither: it is a *human, remote, per-driver, specialist* service at $30/driver/month. If drivers ≈ trucks, that is **$30/truck against our $130** — a 4.3x gap, not the 2x we modelled, and it comes with a company that publishes every price and a reputation for doing one thing well. We cannot win on price, and we cannot win on "remote specialist" either.
+
+**Mitigation.**
+- **The wedge is what they refuse, and we must own it loudly.** Their own "what we don't do" page names Part 395 and ELDs. Their buyers are sent to us by the competitor's own FAQ. **Use that: a referral partnership with DotFleet, and quote their refusal in our positioning.**
+- **Do not imitate their model without their economics.** Their price buys a narrow scope and no SLA beyond one business day. Ours has to carry a 45-60 day deadline, an E&O-backed guarantee, and source-documented corrections.
+- **Watch their pricing as the true floor.** If DotFleet raises prices or adds HOS, our whole price architecture moves.
+- **Their business-hours-only, one-day-response model is the model we should benchmark the roster against** - not the 24/7 promise we were about to drop for cost reasons, but the one competitor who is genuinely comparable to us.
+
+**Owner.** Owner (competitive watch) + requester (positioning).
+
+---
+
+## 19. Corrections we have made to this register (audit trail)
+
+| Date | Change |
+|---|---|
+| 2026-10-19 | 395.8(e)(4)(ii) withdrawn as a citation (does not exist in the current CFR); the governing rules are 395.30(d)/(c)(2)/(e)/(f), 395.8(f)(2), 395.8(k), 395.22, 395.32, 395.36 and Appendix A 4.3.2.8. Verified in full against eCFR and Cornell LII. |
+| 2026-10-19 | 49 U.S.C. 5215 corrected to 49 U.S.C. 521(h) - up to $25,000 and one year per offence, doubled on a subsequent offence. |
+| 2026-10-19 | 49 CFR 390.35 fraudulent records reclassified from "critical" to **acute** in 49 CFR Part 385 Appendix B. Acute violations can produce an unsatisfactory safety rating on their own. |
+| 2026-10-20 | **Sisic sentence corrected.** "18 months, $50,000" was the prosecution's sentencing recommendation. The judgment of 25 January 2021 was three years' probation including six months' home incarceration, 50 hours' community service, a $1,000 fine and a $100 special assessment, plus a three-year FMCSA debarment. Corrected in six documents. |
+| 2026-10-20 | Price ladders reconciled between `PLAN.md` and `SALES-PLAYBOOK.md` (a 15-truck fleet was $1,950/mo in one and $2,250 in the other). The $110 tier at 50+ trucks deleted as loss-making. |
+| 2026-10-20 | Risk 2 ("no publishable track record") and the new risks 12-15 added following the strategy panel. |

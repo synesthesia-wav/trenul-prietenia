@@ -82,7 +82,7 @@ Federal prosecutions of falsified hours-of-service records, DOT Office of Inspec
 
 | Case | Year | Facts | Outcome |
 |---|---|---|---|
-| **US v. Sisic**, D.R.I., Crim. No. 20-63 (18 USC 371 conspiracy to falsify records) | 2020 | Owner of an 11-tractor Rhode Island carrier altered thousands of ELD entries for ~20 drivers to conceal driving and on-duty time, using the carrier's own Omnitracs system. One driver died in an April 2018 crash. | Pleaded guilty. 18 months; $50,000 fine. Company defunct. |
+| **US v. Sisic**, D.R.I., Crim. No. 20-63MSM (18 USC 371 conspiracy to falsify records) | 2020–21 | Owner of an 11-tractor Rhode Island carrier altered thousands of ELD entries for ~20 drivers to conceal driving and on-duty time, using the carrier's own Omnitracs system. One driver died in an April 22, 2018 Oklahoma crash. | **CORRECTED 2026-10-20 — see the correction note immediately below.** Pleaded guilty Oct 14, 2020. **Sentenced Jan 25, 2021 to 3 years' probation including 6 months' home incarceration with electronic monitoring, 50 hours' community service, a $1,000 fine and a $100 special assessment.** FMCSA suspended and proposed debarment for 3 years on Apr 29, 2021, and debarred him on Aug 19, 2021. Company defunct. |
 | **US v. Belovs**, E.D. Pa. | 2012 | 15 false-statement counts. Falsified FMCSA logbooks to conceal driving beyond lawful hours; fatal crash, one killed, five injured. | 18 months; 36 months supervised release; $2,500 fines. |
 | **US v. McClafferty**, E.D. Pa. | 2003 | Pleaded guilty to 10 counts of falsifying HOS logs; 6 other drivers, the dispatcher and the company were indicted. | Guilty plea. |
 | Nijjar Brothers Trucking (Madera, CA) | 2006 | 13 drivers pleaded guilty to false logbooks. | 4 sentenced: 15 months, 3 months, 3 months, 135 days. |
@@ -96,6 +96,18 @@ Federal prosecutions of falsified hours-of-service records, DOT Office of Inspec
 4. Note the **wire fraud** count in the Virginia case. If a vendor is paid to produce false records, that is a fraud claim on us and the carrier. It is the legal reason our "documented, source-backed corrections" standard is not optional.
 
 **Honest limitation:** none of these cases involves a *vendor* being prosecuted for selling falsification. That is consistent with the low visibility of this market, not evidence of legal safety. The vendor exposure is real but untested; our Rule 2 refusal log is the defence.
+
+> ### ⚠️ CORRECTION (2026-10-20) — the Sisic sentence, and a lesson about the disconfirming pass
+>
+> Earlier versions of this log, of `PLAN.md`, of `RISKS.md`, of `SALES-PLAYBOOK.md`, of `README.md` and of `research/memo-gate0.md` stated that Sisic received **"18 months and $50,000."** **That was wrong.** The 18-month/$50,000 figure is what the *United States recommended* in its sentencing memorandum (the guideline range was 18–24 months). The **judgment actually imposed on January 25, 2021** was: **3 years' probation, including 6 months' home incarceration with electronic monitoring, 50 hours of community service, a $1,000 fine and a $100 special assessment.** Separately, FMCSA **suspended and proposed a 3-year debarment on April 29, 2021, and debarred him on August 19, 2021.**
+>
+> Verified from four independent Grade A/B sources, all pulled 2026-10-20: DOT OIG items 38239 (sentencing), 38408 (suspension/debarment) and 37995 (charge); the US Attorney's Office for the District of Rhode Island press release of Jan 25, 2021; and the Judgment in a Criminal Case (D.R.I. 1:20-CR-00063-MSM-PAS, filed 01/27/21). The court's own docket is the controlling source.
+>
+> **Why this matters beyond the embarrassment.** Three of the eight strategy advisors independently flagged that the sentence is a *checkable* fact a prospect can disprove in one search, and that a seller who is caught overstating a court record has no credibility left to sell a compliance file with. The error was mine, made in the very documents whose entire premise is evidentiary discipline — which is precisely the discipline we are asking customers to buy.
+>
+> **The rule this enforces, now binding on every customer-facing number:** *no number appears in any customer-facing document without its source URL and a pull date, and where a figure is a recommendation, recommendation or estimate rather than a final determination, it must be labelled as one.* That rule is now written into `PLAN.md` §3, `SALES-PLAYBOOK.md` §6, and `assets/health-check-build-guide.md` §5.
+>
+> **The substantive story survives the correction and is arguably stronger.** The commercial consequences of what Sisic did were: his company ceased to exist; FMCSA moved to debar him from federal contracting for three years; and he served six months in home confinement. The correct way to tell this story is not "he went to prison for 18 months" but *"the company is gone, he was debarred for three years, and the second copy of the log he handed to the trooper is what ended it."* That is more checkable, less melodramatic, and it points at the actual mechanism — **the false second copy** — which is exactly what our product exists to prevent.
 
 ### 1.5 The criminal and regulatory penalties, verified (Grade A)
 
@@ -270,3 +282,91 @@ US small-business E&O baseline (2025–26, grade C, insurer/broker aggregators):
 | — | Moldova tax | **7% IT Park turnover tax if eligible** — largest single margin lever | C | Medium | Open — accountant |
 
 **Files changed as a result of this research:** `PLAN.md` (pricing, positioning, product design, legal anchors, segment), `SALES-PLAYBOOK.md` (price talk, objection handling, insurance-eligibility exclusions), `RISKS.md` (new risks 12–14), `assets/health-check-build-guide.md` and `assets/health-check-template.md` (rebuilt on counts and violation codes, not percentiles), `assets/hos-rods-reconciliation-checklist.md` (corrected legal anchors, 13-day window, 7-day rule, 395.32 line), `README.md`.
+
+---
+
+## Section 5 — Strategy panel research additions (2026-10-20)
+
+All pulled 2026-10-20 unless stated. Grades as above.
+
+### 5.1 ⚠️ The Sisic sentence — corrected
+
+Earlier entries in this log and in six project documents stated the sentence as "18 months, $50,000." **That was the prosecution's sentencing recommendation** (the guideline range was 18–24 months; the United States "recommends a sentence of 18 months and the agreed-upon fine of $50,000" — US Sentencing Memorandum, D.R.I. Crim. No. 20-63MSM, at 1). **The judgment actually imposed was:**
+
+- **Sentenced January 25, 2021** to **3 years' probation, including 6 months' home incarceration with electronic monitoring; 50 hours' community service; a $1,000 fine; a $100 special assessment.** (DOT OIG item 38239, "Rhode Island Man Sentenced for Conspiracy To Falsify Federal Records," Jan 25 2021; USAO-RI press release, Jan 25 2021; Judgment in a Criminal Case, 1:20-CR-00063-MSM-PAS, filed 01/27/21.)
+- **Guilty plea October 14, 2020** to one count of conspiracy to falsify records, 18 U.S.C. § 371. (Court docket. *Note a conflict: the USAO-RI release says Oct 28, 2020. The court docket says Oct 14, 2020. Do not quote a plea date until reconciled — see the verification list in §5.6.*)
+- **FMCSA suspended and proposed a 3-year debarment on April 29, 2021** (DOT OIG item 38408) and **debarred him on August 19, 2021.**
+- Falsification period per the Information: approximately January 1, 2018 – May 31, 2019. 11 tractors, 10 box trailers, 7–10 drivers. Altered data "on thousands of occasions" via the carrier's own Omnitracs AOBRD. He provided altered records to an Oklahoma state trooper investigating the April 22, 2018 fatal crash and to an FMCSA compliance reviewer during a compliance review.
+- Note from Land Line Media (Jan 27 2021, Grade B): **the AOBRD app does not let a *driver* edit drive time, but "a company official with edit rights can change any portion of the service record or electronic log."** This is the mechanism, and it is exactly the line our service is built on the other side of.
+
+**Why this is recorded in a research log rather than quietly fixed:** the error was made in the very documents whose premise is evidentiary discipline, and it would have been disprovable by a prospect in one search. The rule now binding on every customer-facing document: **no number without a source URL and a pull date, and any figure that is a recommendation, estimate or projection must be labelled as one.**
+
+### 5.2 New Entrant Safety Assurance — Grade A
+
+| Fact | Value | Source |
+|---|---|---|
+| New Entrant Safety Audits, 2023 | **58,600** (2022: 63,672) | FMCSA 2024 Safety Research Forum, "Motor Carrier Industry Stats Overview," p.11 (https://www.fmcsa.dot.gov/sites/fmcsa.dot.gov/files/2024-04/2024%20Safety%20Research%20Forum_Motor%20Carrier%20Stats%20Overview%20508.pdf) |
+| **First-attempt fail rate** | **8.7%** (2023); range 7.4–11.8% 2018–23 | same, p.11 |
+| Pass rate | 91.3% (2023) | same |
+| Exits from the programme, 2023 | 142,920 (2017: 57,055) | same, p.9 |
+| **Revoked for a failed safety audit** | **1% of all programme exits** | same, p.10 |
+| Exits by reason, 2023 | 56% inactive/change/no show at audit/no contact; 42% exited with safety audit or review; 1% revoked; 1% other | same, p.10 |
+| When the audit occurs | within the first 12 months of operations; 18-month monitoring period | 49 CFR 385.307, 385.333; ai.fmcsa.dot.gov/NewEntrant/SafetyAudits.aspx |
+| **How the audit is conducted** | "at the carrier's place of business, **or electronically, by submitting relevant documents to FMCSA** online or via mail or fax" | ai.fmcsa.dot.gov/NewEntrant/SafetyAudits.aspx |
+| **Automatic-fail trigger** | 49 CFR 385.321(b) — 16 regulations, including "failing to require drivers to make hours-of-service records" (395.8(a)) | 385.321(b) table; FMCSA new-entrant page |
+| **The cliff** | CAP due in 45 days (passenger/HM) or 60 days (all other); **failure to submit or implement the CAP results in loss of USDOT registration** | 385.321; FMCSA new-entrant page |
+| Documents the auditor may request | driver list, licences, **RODS + supporting documentation (toll receipts, fuel receipts, bills of lading, trip reports)**, MVRs, medical certificates, vehicle list, maintenance files, accident register, insurance proof, BOC-3, IRP/IFTA | FMCSA Safety Audit Resource Guide (https://ai.fmcsa.dot.gov/NewEntrant/MC/Overview.aspx; PDF at /NewEntrant/Data/Docs/Safety Audit Guidebook.pdf) |
+
+**Derived (ours, not FMCSA's):** 58,600 × 8.7% ≈ **5,100 carriers a year** fail a New Entrant Safety Audit and must produce a corrective action plan within 45–60 days or lose their registration.
+
+**Contradiction logged:** vendor blogs claim "roughly one in three new carriers fails" and some state agencies report ~40% (cleartohaul.com, Grade C). **FMCSA's own data says 8.7%.** Do not use the vendor figure.
+
+**Correction to an earlier entry in this log:** the research log previously recorded the failure rate as ~1-in-3 (from a vendor source). The Grade A figure is 8.7%, and the "1%" figure is the *revocation* rate. The panel's warning about the New Entrant segment's size (§17 of `RISKS.md`) is written against 8.7%, not 1-in-3.
+
+### 5.3 English Language Proficiency — Grade A/B
+
+| Fact | Value | Source |
+|---|---|---|
+| NPRM | **91 FR 51422**, published 2026-08-10, Docket FMCSA-2026-0826, RIN 2126-AC99; **comment period closed 2026-10-09** | federalregister.gov/documents/2026/08/10/2026-16288 |
+| Substance | would codify ELP violation under **49 CFR 391.11(b)(2)** as an **out-of-service** criterion, aligning the FMCSRs with the CVSA OOS criteria revised 2026-04-19 | same |
+| FMCSA's own estimate | **~9,000 additional drivers OOS annually** in the border commercial zones; $800/day downtime; 2-day replacement delay; **~$14.4M/yr carrier cost** | 91 FR 51422 at 51428 |
+| Already in effect | CVSA added ELP to the OOS criteria effective **2025-06-25**; FMCSA enforcement guidance MC-SEE-2026-0002 (2026-04-16) supersedes MC-SEE-2025-0001; the 2016 policy memo MC-ECE-2016-006 rescinded the Obama-era non-placement policy | CVSA; FMCSA policy memo 2026-04-16 |
+| Scale since June 2025 | **"more than 20,000 truckers have been kicked out of service"** for failing ELP; California began enforcing January 2026 after FMCSA withheld $40M | DOT EO Fact Sheet (transportation.gov, 2026-05) |
+| Carrier effect | one affected driver ≈ 2 days' delay and a replacement-driver search | 91 FR 51422 |
+
+**Note the date:** the comment period closed 2026-10-09, ten days before this pull. The rule is proposed, not final, and the CVSA OOS criteria are already operative in substance.
+
+### 5.4 Two competitors not previously known
+
+**DotFleet Compliance** (https://www.dotfleetcompliance.com/ and /pricing/, pulled 2026-10-20, Grade C — vendor's own pages): a **fully remote** single-regulation specialist for **fleets of 1–50 trucks**, **$75 per driver one-time** (file built or remediated) + **$30 per driver per month** ongoing, month-to-month, cancel with 30 days, **"response within 1 business day"**, **Mon–Fri 8am–6pm CT**. It explicitly refuses the rest: "We deliberately do one thing well. We don't administer drug and alcohol testing (Part 382), **hours of service**, vehicle maintenance files, or permits — and we'll tell you plainly what you still need to cover elsewhere."
+
+**Why it matters three ways:** (1) it **proves the business model** — a remote, narrow, published-price, per-driver specialist desk is a proven, sellable shape; (2) it **hands us the wedge** — its own FAQ points its buyers at Part 395 and ELDs; (3) it **is the specialist price reference** we cannot beat on price ($30/driver/month against our $130/truck/month), which is why the differentiator must be the file and the deadline, not the hourly rate.
+
+**AI ELD** (https://ai-eld.com/pricing, pulled 2026-10-20, Grade C): **Basic $20/vehicle/month**; **Monitoring $50/vehicle/month** — "a team that actively watches your account for disconnected events, violations and other alerts and works to help resolve them within minutes so your staff spends less time firefighting"; month-to-month, no minimum truck count, billed per active user or vehicle. **This is the real low-end disruption vector: 2.6x cheaper than us, with a human team, and the ELD itself included.** Their own article adds: FMCSA's 2016 regulatory impact analysis estimated the average ELD cost at $41.25/truck/month; AI ELD Basic $20; mid-range single-truck plans $25–35.
+
+**Samsara "Smart Compliance"** (https://www.samsara.com/uk/company/news/press-releases/samsara-launches-smart-compliance, published **2026-04-21**, Grade B — company press release): industry-first dynamic compliance for the **EU and UK only**; "we review yesterday's, deal with them immediately, and send them straight to the driver digitally… it takes about two minutes per infringement"; proactive pre-infringement audio alerts; "the first platform" to consolidate infringement analysis, alerts and resolution. **US availability unconfirmed and is the single biggest threat on the horizon.**
+
+**Motive** (Businesswire releases 2026-02-18, Grade B): AI-driven driver qualification document management — AI document capture, validation of licences/medical cards/MVRs, in-app driver uploads, automatic prevention of vehicle access when documents are missing or expired. The release's own lead cites "FMCSA audit data shows compliance and recordkeeping errors — like outdated or missing documents in driver files — are among the most common issues uncovered during reviews." Motive also offers "Qualification Documents Expert Services."
+
+### 5.5 2026 rule change — the in-vehicle packet (Grade A)
+
+**91 FR 12448**, final rule published 2026-06-22, **effective 2026-07-22**, Docket FMCSA-2025-0114, RIN 2126-AC88: FMCSA **rescinded** the requirement to keep a copy of the ELD operator's manual in the vehicle. "Section 395.22 is amended by removing paragraph (h)(1) and redesignating paragraphs (h)(2) through (h)(4) as paragraphs (h)(1) through (h)(3)."
+
+**Current 49 CFR 395.22(h) in full, verified 2026-10-20 at Cornell LII:** a motor carrier must ensure its drivers possess onboard an ELD information packet containing (1) an instruction sheet describing data transfer and how to produce and transfer HOS records to an authorised safety official; (2) an instruction sheet describing **ELD malfunction reporting requirements and recordkeeping procedures during malfunctions**; and (3) a supply of blank RODS graph-grids sufficient for a minimum of **8 days**.
+
+**And 49 CFR 395.34(a):** in case of an ELD malfunction the driver must (1) note the malfunction and give the carrier **written notice within 24 hours**; (2) **reconstruct the record of duty status for the current 24-hour period and the previous 7 consecutive days on graph-grid paper**; and (3) continue manual RODS until the ELD is serviced.
+
+**The chain, and why it matters:** miss item (h)(2) and the driver cannot comply with 395.34(a)(1) — a **weight-5** violation (395.34A1-ELDDFN) — or with 395.34(a)(2), the paper reconstruction, because he was never told how and has no paper to do it on (item (h)(3)). The whole chain is checkable **in five minutes by opening the glovebox**, with no ELD integration, no API, no NDA and no E&O required. It is the one thing FMCSA's free layer cannot do, because that layer is knowledge and this is observation.
+
+### 5.6 Remaining verification items from the panel
+
+1. The 14-day ELD records-availability paragraph and 395.3(e)(4) — still unlocated (carried forward from §1.3).
+2. The Sisic guilty-plea date: Oct 14 2020 (court docket) vs Oct 28 2020 (USAO-RI release). Reconcile before quoting.
+3. Whether Samsara Smart Compliance is planned for the US, and when — quarterly check; it is the deadline on the strategy.
+4. Whether Motive's Qualification Documents Expert Services is available in the US and at what price.
+5. Whether AI ELD's $50 Monitoring tier covers US hours and whether it serves fleets already on Motive/Samsara hardware.
+6. The insurance cost per truck for a 15–75 PU fleet — two public sources disagree by an order of magnitude ($700–1,600 per unit per year vs $750–2,500+ per truck per month). Get 5 broker quotes.
+7. Whether an E&O policy can be written for a Moldova-domiciled provider, and whether an underwriter will write a citation indemnity. **Broker only; research cannot close it.**
+8. Whether the Moldova IT Park 7% turnover regime applies to this service. **Accountant only.**
+9. The New Entrant population's fleet-size distribution and the 8.7% fail rate as a countable list from the census file.
+10. Whether DotFleet, TenFour, Prime Fleet or any other provider already delivers a **source-documented** file — **if one of them does, our "file" shrinks to the refusal log and the whole positioning must narrow.** This is the single most important competitive check outstanding, and it should be run in the next 14 days.
